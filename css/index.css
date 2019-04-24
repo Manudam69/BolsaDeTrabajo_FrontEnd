@@ -109,18 +109,16 @@
     font-size: 14px;
     
 }
-section {
-    height: 100vh;
-}
 
-
+        
+       
 nav li a {
     text-transform: uppercase;
 }
 
 #screen2 {
     background: rgb(18, 18, 18);
-    height: 30vh;
+    height: 130vh;
 }
 #screen3 {
      background: rgb(18, 18, 18);
