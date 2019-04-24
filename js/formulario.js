@@ -1,17 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.autocomplete');
-    var instances = M.Autocomplete.init(elems, options);
+
+  $(document).ready(function(){
+    $('#state').autocomplete({
+      data: {
+        "Aguascalientes": null,
+        "Zacatecas": null,
+        "Jalisco": 'https://placehold.it/250x250'
+      },
+    });
   });
 
 
-  // Or with jQuery
-
   $(document).ready(function(){
-    $('input.autocomplete').autocomplete({
+    $('#job').autocomplete({
       data: {
-        "Apple": null,
-        "Microsoft": null,
-        "Google": 'https://placehold.it/250x250'
+        "Progrmador": null,
+        "Matematico": null,
+        "Intel": 'https://placehold.it/250x250'
       },
     });
   });

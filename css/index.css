@@ -1,6 +1,7 @@
 *{
     font-family: 'Raleway', sans-serif;
 }
+
 .form-control {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -118,11 +119,11 @@ nav li a {
 }
 
 #screen2 {
-    background: #009dff;
+    background: rgb(18, 18, 18);
     height: 30vh;
 }
 #screen3 {
-    background: #009dff;
+     background: rgb(18, 18, 18);
 }
 
 .fixed {
@@ -131,6 +132,7 @@ nav li a {
     height: 70px;
     z-index: 1;
 }
+
 
 
 @media (min-width: 768px) {
