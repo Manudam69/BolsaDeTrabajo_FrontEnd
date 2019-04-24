@@ -1,5 +1,5 @@
-body {
-    font-family: 'Open Sans', sans-serif;
+*{
+    font-family: 'Raleway', sans-serif;
 }
 .form-control {
     -webkit-box-shadow: none;
@@ -21,7 +21,7 @@ body {
     padding-right: 16px;
     border-radius: 0;
     background-color: rgb(6, 43, 62);
-   
+   border: none;
    
 }
 .navbar .navbar-brand {
@@ -30,16 +30,22 @@ body {
     padding-right: 50px;
     color: aliceblue;
 }
+
+.navbar .navbar-brand:hover{
+    color: aliceblue;
+}
+
 .navbar .navbar-brand b {
     font-weight: bold;
     color: #29c68c;
 }
 .navbar ul.nav li a {
-    color: #999;
+    color: #9a9a9a;
 }
 .navbar ul.nav li a:hover,
 .navbar ul.nav li a:focus {
-    color: #ffffff !important;
+    color: #1df800 !important;
+    background-color: transparent;
 }
 .navbar ul.nav li.active > a,
 .navbar ul.nav li.open > a {
@@ -47,6 +53,7 @@ body {
     background: transparent !important;
 }
 .navbar .form-inline .input-group-addon {
+    
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 2px 0 0 2px;
@@ -63,6 +70,7 @@ body {
     border-color: #29c68c;
     background: #29c68c;
     outline: none;
+    
 }
 .navbar .form-inline .btn:hover,
 .navbar .form-inline .btn:focus {
@@ -71,6 +79,7 @@ body {
 }
 .navbar .login-form .input-group {
     margin-right: 4px;
+    font-family: 'Raleway', sans-serif;
     float: left;
 }
 .navbar .login-form .form-control {
@@ -85,16 +94,19 @@ body {
     border-color: #e5e5e5;
     -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
     box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+    background-color: rgb(6, 43, 62);
+    
 }
 .navbar .dropdown-menu li a {
     padding: 6px 20px;
 }
 .navbar .navbar-right .dropdown-menu {
-    width: 505px;
+    width: 440px;
     padding: 20px;
     left: auto;
     right: 0;
     font-size: 14px;
+    
 }
 section {
     height: 100vh;
@@ -106,10 +118,11 @@ nav li a {
 }
 
 #screen2 {
-    background: #efc94d;
+    background: #009dff;
+    height: 30vh;
 }
 #screen3 {
-    background: #e1793d;
+    background: #009dff;
 }
 
 .fixed {
@@ -119,6 +132,12 @@ nav li a {
     z-index: 1;
 }
 
+
+@media (min-width: 768px) {
+    #item{
+        padding-left: 70px;
+    }
+}
 
 @media (max-width: 768px) {
     .navbar .navbar-right .dropdown-menu {
