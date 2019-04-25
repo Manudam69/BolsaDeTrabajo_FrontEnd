@@ -1,10 +1,9 @@
-*{
+* {
     font-family: 'Raleway', sans-serif;
 }
-body{
-     background: rgb(18, 18, 18);
+body {
+    background: rgb(18, 18, 18);
 }
-
 .form-control {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -25,8 +24,7 @@ body{
     padding-right: 16px;
     border-radius: 0;
     background-color: rgb(6, 43, 62);
-   border: none;
-   
+    border: none;
 }
 .navbar .navbar-brand {
     font-size: 20px;
@@ -34,18 +32,41 @@ body{
     padding-right: 50px;
     color: aliceblue;
 }
-
-.navbar .navbar-brand:hover{
+.navbar .navbar-brand:hover {
     color: aliceblue;
 }
-
 .navbar .navbar-brand b {
     font-weight: bold;
     color: #29c68c;
 }
 .navbar ul.nav li a {
-    color: #9a9a9a;
+    position: relative;
+    color: #8e8484;
+    text-decoration: none;
 }
+.navbar ul.nav li a:hover {
+    color: #000;
+}
+.navbar ul.nav li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1df800;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.navbar ul.nav li a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+.navbar ul.nav li a {}
 .navbar ul.nav li a:hover,
 .navbar ul.nav li a:focus {
     color: #1df800 !important;
@@ -57,7 +78,6 @@ body{
     background: transparent !important;
 }
 .navbar .form-inline .input-group-addon {
-    
     -webkit-box-shadow: none;
     box-shadow: none;
     border-radius: 2px 0 0 2px;
@@ -74,7 +94,6 @@ body{
     border-color: #29c68c;
     background: #29c68c;
     outline: none;
-    
 }
 .navbar .form-inline .btn:hover,
 .navbar .form-inline .btn:focus {
@@ -99,7 +118,6 @@ body{
     -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
     box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
     background-color: rgb(6, 43, 62);
-    
 }
 .navbar .dropdown-menu li a {
     padding: 6px 20px;
@@ -110,53 +128,41 @@ body{
     left: auto;
     right: 0;
     font-size: 14px;
-    
 }
-
-        
-       
 nav li a {
     text-transform: uppercase;
 }
-
-
 #screen2 {
     background: rgb(18, 18, 18);
 }
 #screen3 {
-     background: rgb(18, 18, 18);
+    background: rgb(18, 18, 18);
 }
-
 .fixed {
     position: fixed;
     top: 0;
     height: 70px;
     z-index: 1;
 }
-
 .demo-card-wide.mdl-card {
-  width: 512px;
+    width: 512px;
 }
 .demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 176px;
-  background: url('../images/slide1.jpg') center / cover;
+    color: #fff;
+    height: 176px;
+    background: url('../images/slide1.jpg') center / cover;
 }
 .demo-card-wide > .mdl-card__menu {
-  color: #fff;
+    color: #fff;
 }
-
-.background{
-     background-color: rgb(6, 43, 62);
+.background {
+    background-color: rgb(6, 43, 62);
 }
-
-
 @media (min-width: 768px) {
-    #item{
+    #item {
         padding-left: 70px;
     }
 }
-
 @media (max-width: 768px) {
     .navbar .navbar-right .dropdown-menu {
         width: 100%;
@@ -175,11 +181,11 @@ nav li a {
         width: 100%;
     }
     .demo-card-wide.mdl-card {
-  width: 356px;
-}
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 130px;
-  background: url('../images/slide1.jpg') center / cover;
-}
+        width: 356px;
+    }
+    .demo-card-wide > .mdl-card__title {
+        color: #fff;
+        height: 130px;
+        background: url('../images/slide1.jpg') center / cover;
+    }
 }
