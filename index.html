@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+
     <title>Bolsa de trabajo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- /Footer -->
 
-    <link rel="stylesheet" href="./css/index.css">
+
     <!-- Required MDC Web JavaScript library -->
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <!-- Instantiate single textfield component rendered in the document -->
@@ -31,6 +31,9 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -83,7 +86,6 @@
     </header>
     <article id="screen2">
         <div class="container pt-5 text-center text-white">
-
             <p class="mt-5 h2">Buscar empleo ahora</p>
             <p class="mt-0 h2 mb-5 pb-2">Bolsa de trabajo</p>
 
@@ -100,7 +102,7 @@
                 <div class="col-md-5">
                     <div class="row">
                         <div class="input-field col s6">
-                            <i class="material-icons prefix">folder</i>
+                            <i class="material-icons prefix">work</i>
                             <input type="text" id="job" class="autocomplete">
                             <label for="job" style="color: aliceblue;">Titulo o Empresa</label>
                         </div>
@@ -111,25 +113,45 @@
                         <i class="material-icons right">search</i>
                     </button>
                 </div>
-                
-            </div>
 
+            </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 ">
                     <p class="lead">¡Trabaja en las mejores empresas de México!</p>
                 </div>
-                <div class="col-md-12">
-               
+                <div class="mx-auto">
+                    <!-- Wide card with share menu button -->
+                    <div class="demo-card-wide mdl-card mdl-shadow--2dp background">
+                        <div class="mdl-card__title">
+
+                        </div>
+                        <div class="mdl-card__supporting-text mx-auto text-white">
+                            Encuentra más de 100,000 ofertas de empleo en nuestra bolsa de trabajo
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border mt-0 pt-0 background">
+                            <a class="waves-effect waves-light btn-large">registrarse</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
+        </div>
+    </article>
+    <div class="mdc-elevation--z1 text-white my-5 background">
+        <div class="container">
+            <div class="row mb-0 mt-3 mb-3">
+                <div class="col-md-8 mb-0">
+                    <p class="mb-0 mt-3 h4"><b>Te ayudamos a encontrar un trabajo mejor</b></p>
+                    <p class="mt-0">Haz que tu currículum sea visible para miles de empresas en nuestra bolsa de trabajo</p>
+                </div>
+                <div class="col-md-4 text-left my-auto">
+                    <a class="waves-effect waves-light btn-large" style="width: 100%;"><i class="material-icons right">assignment</i>SUBE TU CURRÍCULUM</a>
+                </div>
+            </div>
         </div>
 
+    </div>
 
-
-    </article>
-
-    <footer class="mdl-mini-footer" style="background-color: rgb(23, 23, 23)">
+    <footer class="mdl-mini-footer mdc-elevation--z1" style="background-color: rgb(23, 23, 23)">
         <div class="mdl-mini-footer__left-section">
             <div class="mdl-logo">El farolito</div>
             <ul class="mdl-mini-footer__link-list">
@@ -149,7 +171,6 @@
     <script src="./js/formulario.js"></script>
 
 </body>
-
 
 
 </html>

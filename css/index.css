@@ -1,6 +1,9 @@
 *{
     font-family: 'Raleway', sans-serif;
 }
+body{
+     background: rgb(18, 18, 18);
+}
 
 .form-control {
     -webkit-box-shadow: none;
@@ -116,9 +119,9 @@ nav li a {
     text-transform: uppercase;
 }
 
+
 #screen2 {
     background: rgb(18, 18, 18);
-    height: 130vh;
 }
 #screen3 {
      background: rgb(18, 18, 18);
@@ -131,6 +134,21 @@ nav li a {
     z-index: 1;
 }
 
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../images/slide1.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.background{
+     background-color: rgb(6, 43, 62);
+}
 
 
 @media (min-width: 768px) {
@@ -156,4 +174,12 @@ nav li a {
     .navbar .login-form .btn {
         width: 100%;
     }
+    .demo-card-wide.mdl-card {
+  width: 356px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 130px;
+  background: url('../images/slide1.jpg') center / cover;
+}
 }
