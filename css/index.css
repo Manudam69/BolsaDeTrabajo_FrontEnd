@@ -146,6 +146,7 @@ nav li a {
 }
 .demo-card-wide.mdl-card {
     width: 512px;
+    margin: auto;
 }
 .demo-card-wide > .mdl-card__title {
     color: #fff;
@@ -158,12 +159,31 @@ nav li a {
 .background {
     background-color: rgb(6, 43, 62);
 }
+.demo-list-item {
+    width: 300px;
+}
+.estado {
+    color: rgb(255, 255, 255);
+}
+.estado:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+#buscar:hover {
+    background-color: rgb(43, 187, 173);
+    color: white;
+}
+
+
 @media (min-width: 768px) {
     #item {
         padding-left: 70px;
     }
 }
 @media (max-width: 768px) {
+    #BCurriculum {
+        font-size: 14px;
+    }
     .navbar .navbar-right .dropdown-menu {
         width: 100%;
         background: transparent;
@@ -181,6 +201,7 @@ nav li a {
         width: 100%;
     }
     .demo-card-wide.mdl-card {
+        height: 270px;
         width: 356px;
     }
     .demo-card-wide > .mdl-card__title {
