@@ -38,16 +38,16 @@ section {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
-span > a {
+small > a {
     position: relative;
     color: #ffffff;
     text-decoration: none;
 }
-span > a:hover {
+small > a:hover {
     color: #ffffff;
     text-decoration: none;
 }
-span > a:before {
+small > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -58,15 +58,22 @@ span > a:before {
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all 0.5s ease-in-out 0s;
-    transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
-span > a:hover:before {
+small > a:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
+footer {
+    margin-top: 100px;
+}
 
+p > a:hover{
+    text-decoration: none;
+    color: #ff0093;
+}
 @media (min-width: 1050px) {
     #formulario {
         width: 35%;
