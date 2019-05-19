@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <title>Bolsa de trabajo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
@@ -19,15 +17,9 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- /Footer -->
-
-
     <!-- Required MDC Web JavaScript library -->
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <!-- Instantiate single textfield component rendered in the document -->
-    <script>
-        mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
-
-    </script>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -64,21 +56,22 @@
                 <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item dropdown">
+               
+                <li class="nav-item dropdown" id="sesion">
                     <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#"><i class="fa fa-user-o"></i> Iniciar sesión</a>
                     <ul class="dropdown-menu">
                         <li>
-                            <form class="form-inline login-form" action="/examples/actions/confirmation.php" method="post">
+                            <div class="form-inline login-form">
                                 <div class="input-group">
                                     <span class="input-group-addon" style="background-color: transparent; border: none; color: aliceblue;"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" placeholder="Usuario" required style="color: aliceblue;">
+                                    <input type="text" class="form-control" placeholder="Usuario" required style="color: aliceblue;" id="user">
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon" style="background-color: transparent; border: none; color: aliceblue;"><i class="fa fa-lock"></i></span>
-                                    <input type="text" class="form-control" placeholder="Contraseña" required style="color: aliceblue;">
+                                    <input type="password" class="form-control" placeholder="Contraseña" required style="color: aliceblue;" id="contraseña">
                                 </div>
-                                <button type="submit" class="btn btn-primary mt-1 mr-2 ml-1">Iniciar Sesión</button>
-                            </form>
+                                <button class="btn btn-primary mt-1 mr-2 ml-1" id="login">Iniciar Sesión</button>
+                            </div>
                         </li>
                     </ul>
                 </li>
@@ -161,9 +154,6 @@
             <hr>
         </div>
     </div>
-
-    
-
     <footer class="mdl-mini-footer mdc-elevation--z1" style="background-color: rgb(23, 23, 23)">
         <div class="mdl-mini-footer__left-section">
             <div class="mdl-logo">El farolito</div>
@@ -177,12 +167,15 @@
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src ="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./js/formulario.js"></script>
-
+    <script src="./js/sesion.js"></script>
+    <script src="./js/is-log.js"></script>
+    <script src="./js/logout.js"></script>
 </body>
 
 
