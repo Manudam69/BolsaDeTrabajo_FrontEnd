@@ -14,5 +14,6 @@ $('#newUser').on("click", function () {
 
     $.post(settings).done(function (response) {
         console.log(response);
+        $(location).attr('href', "/");
     });
 });

@@ -4,7 +4,6 @@ var settings = {
 
 $.get(settings).done(function (response) {
     if (response.ok) {
-        $('#sesion').html('<a href="#" class="nav-link" id="logout">Cerrar Sesión</a>')
-        session = true;
+        $(location).attr('href',"/");
     }
 });
