@@ -1,6 +1,7 @@
 * {
     font-family: 'Source Sans Pro', sans-serif;
 }
+
 body,
 html {
     height: 100%;
@@ -11,9 +12,11 @@ html {
     line-height: 1.8em;
     color: #ffffff;
 }
+
 body {
     background: rgb(18, 18, 18);
 }
+
 .pimg2,
 .pimg3 {
     position: relative;
@@ -22,18 +25,22 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 .pimg2 {
     background-image: url('../images/parallax1.jpg');
     min-height: 400px;
 }
+
 .pimg3 {
     background-image: url('../images/parallax2.jpg');
     min-height: 400px;
 }
+
 .section {
     text-align: center;
     padding: 50px 80px;
 }
+
 .ptext {
     position: absolute;
     top: 50%;
@@ -44,14 +51,17 @@ body {
     letter-spacing: 8px;
     text-transform: uppercase;
 }
+
 .ptext .border {
     background-color: #111;
     color: #fff;
     padding: 20px;
 }
+
 .ptext .border.trans {
     background-color: transparent;
 }
+
 .ptext>p {
     margin: 0;
     margin-top: 39px;
@@ -59,22 +69,31 @@ body {
     font-size: 15px;
 }
 
+.no-mostrar {
+    display: none;
+}
+
+
 /*Navbar*/
 
 nav {
     background-color: rgb(10, 3, 38);
 }
+
 li>img {
     padding-top: 8px;
 }
+
 .elementos>li>a {
     position: relative;
     color: #ffffff;
     text-decoration: none;
 }
+
 .elementos>li>a:hover {
     color: #1df800;
 }
+
 .elementos>li>a:before {
     content: "";
     position: absolute;
@@ -89,11 +108,13 @@ li>img {
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
+
 .elementos>li>a:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
+
 
 /*Fin Navbar*/
 
@@ -102,22 +123,26 @@ li>img {
     margin-top: 20px;
     padding: auto;
 }
+
 .busqueda>.boton {
     padding-top: 20px;
 }
 
-.btn-large{
-     background-color: rgb(10, 3, 38);
+.btn-large {
+    background-color: rgb(10, 3, 38);
 }
-.btn-large:hover{
-     background-color: rgb(9, 3, 34);
+
+.btn-large:hover {
+    background-color: rgb(9, 3, 34);
 }
+
 
 /* label focus color */
 
-.input-field input:focus + label {
+.input-field input:focus+label {
     color: rgb(255, 255, 255) !important;
 }
+
 
 /* label underline focus color */
 
@@ -126,6 +151,7 @@ li>img {
     -webkit-box-shadow: 0 1px 0 0 rgb(255, 255, 255) !important;
     box-shadow: 0 1px 0 0 rgb(16, 114, 239) !important
 }
+
 .input-field .prefix.active {
     color: rgb(255, 255, 255);
 }
@@ -134,16 +160,17 @@ li>img {
     background-color: rgb(10, 3, 38);
     color: #ffffff;
 }
-.h{
+
+.h {
     font-size: 20px;
 }
 
-.mt-0{
+.mt-0 {
     margin: 0;
     padding: 0;
 }
 
-.espacio{
+.espacio {
     margin-bottom: 50px;
 }
 
