@@ -186,4 +186,13 @@ li>img {
     .pimg3 {
         background-attachment: scroll;
     }
+    .ptext .border {
+        background-color: transparent;
+        color: #fff;
+        padding: 20px;
+    }
+
+    .ptext{
+      background-color: #111;
+    }
 }
