@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de sesión</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <!--Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body class="valign-wrapper">
+    <div class="container elementos">
+       
+        <br>
+        <div class="row center">
+            <a href="./index.html"><img src="./images/elfarolito.png" class="responsive-img" width="100"></a>
+        </div>
+        <div class="row center">
+            <h4>INICIAR SESIÓN</h4>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="user" type="text" style="color: white;">
+                <label for="user">Usuario</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input id="contraseña" type="password" style="color: white;">
+                <label for="contraseña">Contraseña</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <a class="waves-effect waves-light btn-large" id="login">INICIAR SESIÓN</a>
+            </div>
+        </div>
+
+        <div class="row center">
+            <p>¿Eres nuevo en El farolito?</p>
+            <a href="./signup.html">Crear tu cuenta en el farolito</a>
+        </div>
+        <hr>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/usuario/login.js"></script>
+    <script src="./js/usuario/redirect-login.js"></script>
+    
+</body>
+
+</html>

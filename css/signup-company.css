@@ -1,0 +1,56 @@
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+    background: rgb(18, 18, 18);
+    color: white;
+}* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+    background: rgb(18, 18, 18);
+    color: white;
+}
+.btn-large {
+    width: 100%;
+    margin-top: auto;
+    background-color: rgb(10, 3, 38);
+}
+.btn-large:hover {
+    background-color: rgb(9, 3, 34);
+}
+
+.elementos {
+    width: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.input-field input:focus + label {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* label underline focus color */
+
+.row .input-field input:focus {
+    border-bottom: 1px solid rgb(255, 255, 255) !important;
+    -webkit-box-shadow: 0 1px 0 0 rgb(255, 255, 255) !important;
+    box-shadow: 0 1px 0 0 rgb(16, 114, 239) !important
+}
+.input-field .prefix.active {
+    color: rgb(255, 255, 255);
+}
+
+a{
+    color: #00ff1d;
+}
+
+@media(max-width:992px) {
+    .btn-large {
+        width: 100%;
+        margin-top: auto;
+    }
+    .elementos {
+        width: 100%;
+    }
+}

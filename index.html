@@ -1,184 +1,122 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <title>Bolsa de trabajo</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <!-- Navbar -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- /Navbar -->
-    <!-- Footer -->
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- /Footer -->
-    <!-- Required MDC Web JavaScript library -->
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <!-- Instantiate single textfield component rendered in the document -->
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <!--Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <header class="navbar navbar-default navbar-expand-md navbar-dark my-0 py-0 mdc-elevation--z2">
-        <div class="navbar-header col-md-1">
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down elementos">
+                    <li><a href="sass.html">Perfiles laborales<i class="material-icons right">contacts</i></a></li>
+                    <li><a href="badges.html">Perfiles de empresas<i class="material-icons right">business_center</i></a></li>
+                    <li><a href="./signup-company.html">Registrar mi empresa<i class="material-icons right">business</i></a></li>
+                    <li id="sesion-web" class="sesion"><a href="./login.html">Iniciar sesión<i class="material-icons right">account_circle</i></a></li>
+                </ul>
+            </div>
+        </nav>
 
-            <p class="navbar-brand mb-0">EL <b>FAROLITO</b></p>
-            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-        </div>
-        <!-- Collection of nav links, forms, and other content for toggling -->
-        <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
-            <ul class="nav navbar-nav" id="item">
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                <li class="nav-item dropdown">
-                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#" class="dropdown-item">Web Design</a></li>
-                        <li><a href="#" class="dropdown-item">Web Development</a></li>
-                        <li><a href="#" class="dropdown-item">Graphic Design</a></li>
-                        <li><a href="#" class="dropdown-item">Digital Marketing</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-
-                <li class="nav-item dropdown" id="sesion">
-                    <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#"><i class="fa fa-user-o"></i> Iniciar sesión</a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="form-inline login-form">
-                                <div class="input-group">
-                                    <span class="input-group-addon" style="background-color: transparent; border: none; color: aliceblue;"><i class="fa fa-user"></i></span>
-                                    <input type="text" class="form-control" placeholder="Usuario" required style="color: aliceblue;" id="user">
-                                </div>
-                                <div class="input-group">
-                                    <span class="input-group-addon" style="background-color: transparent; border: none; color: aliceblue;"><i class="fa fa-lock"></i></span>
-                                    <input type="password" class="form-control" placeholder="Contraseña" required style="color: aliceblue;" id="contraseña">
-                                </div>
-                                <button class="btn btn-primary mt-1 mr-2 ml-1" id="login">Iniciar Sesión</button>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="sass.html"><i class="material-icons">contacts</i>Perfiles laborales</a></li>
+            <li><a href="badges.html"><i class="material-icons">business_center</i>Perfiles de empresas</a></li>
+            <li><a href="./signup-company.html"><i class="material-icons">business</i>Registrar mi empresa</a></li>
+            <li id="sesion-cel" class="sesion"><a href="./login.html"><i class="material-icons">account_circle</i>Iniciar sesión</a></li>
+        </ul>
     </header>
-    <article id="screen2">
-        <div class="container pt-5 text-center text-white">
-            <p class="mt-5 h2">Buscar empleo ahora</p>
-            <p class="mt-0 h2 mb-5 pb-2">Bolsa de trabajo</p>
-
-            <div class="row mt-5" style="color: rgb(255, 255, 255);">
-                <div class="col-md-5">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix">location_on</i>
-                            <input type="text" id="state" class="autocomplete">
-                            <label for="state">Estado</label>
-
-                            <span class="helper-text text-muted">DF,Estado de México,Nuevo León,Jalisco</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix">work</i>
-                            <input type="text" id="job" class="autocomplete">
-                            <label for="job">Titulo o Empresa</label>
-                            <span class="helper-text text-muted">Gerente,Mercadotecnia,Compras,Ingeniero</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 mt-4 pt-3 h-100 col-12">
-                    <button class="btn waves-effect waves-light" type="submit" name="action" style="width: 100%;" id="buscar">BUSCAR
-                        <i class="material-icons right">search</i>
-                    </button>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-md-12 ">
-                    <p class="lead">¡Trabaja en las mejores empresas de México!</p>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Wide card with share menu button -->
-                    <div class="demo-card-wide mdl-card mdl-shadow--2dp background col-12">
-                        <div class="mdl-card__title">
-
-                        </div>
-                        <div class="mdl-card__supporting-text mx-auto text-white">
-                            Encuentra más de 100,000 ofertas de empleo en nuestra bolsa de trabajo
-                        </div>
-                        <div class="mdl-card__actions mdl-card--border mt-0 pt-0 background">
-                            <a class="waves-effect waves-light btn-large" id="registro">registrarse</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </article>
-    <div class="mdc-elevation--z1 text-white my-5 background">
-        <div class="container">
-            <hr>
-            <div class="row mb-0 mt-3 mb-3 ">
-                <div class="col-lg-8 mb-0 col-md-12">
-                    <p class="mb-0 mt-3 h4"><b>Te ayudamos a encontrar un trabajo mejor</b></p>
-                    <p class="mt-0">Haz que tu currículum sea visible para miles de empresas en nuestra bolsa de trabajo</p>
-                </div>
-                <div class="col-lg-4 text-left my-auto col-md-12">
-                    <a class="waves-effect waves-light btn-large" style="width: 100%;" id="BCurriculum"><i class="material-icons right">assignment</i>SUBE TU CURRÍCULUM</a>
-
-                </div>
-
-            </div>
-            <hr>
+    <div class="pimg2">
+        <div class="ptext">
+            <span class="border">EL FAROLITO</span>
+            <p><span class="border">Bolsa de trabajo</span></p>
         </div>
     </div>
-    <footer class="mdl-mini-footer mdc-elevation--z1" style="background-color: rgb(23, 23, 23)">
-        <div class="mdl-mini-footer__left-section">
-            <div class="mdl-logo">El farolito</div>
-            <ul class="mdl-mini-footer__link-list">
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Privacy & Terms</a></li>
-            </ul>
+
+    <div class="row container busqueda">
+       <hr>
+        <div class="col l5 s12" id="pais">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">location_on</i>
+                <input type="text" id="pais-input" class="autocomplete" style="color: white;">
+                <label for="pais-input">País</label>
+            </div>
+        </div>
+        <div class="col l5 s12" id="titulo">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">work</i>
+                <input type="text" id="titulo-input" class="autocomplete" style="color: white;">
+                <label for="titulo-input">Titulo o Empresa</label>
+            </div>
+        </div>
+        <div class="col l2 s12 boton">
+            <a class="waves-effect waves-light btn-large">BUSCAR <i class="material-icons right">search</i></a>
+        </div>
+    </div>
+
+    <div>
+        <div class="row container">
+            <div class="col l8 s12">
+                <p class="h mt-0">Te ayudamos a encontrar un trabajo mejor</p>
+                <p class="mt-0">Haz que tu currículum sea visible para miles de empresas en nuestra bolsa de trabajo</p>
+            </div>
+            
+            <div class="col l4 s12">
+                <a class="waves-effect waves-light btn-large" style="width: 100%;" id="BCurriculum"><i class="material-icons right">assignment</i>SUBE TU CURRÍCULUM</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="container espacio"><hr></div>
+
+
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border">Busca empleo ahora</span>
+            <p><span class="border">EN EMPRESAS DE TODO EL MUNDO</span></p>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="">Footer Content</h5>
+                    <p class="">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5>Links</h5>
+                    <ul>
+                        <li><a href="#!">Link 1</a></li>
+                        <li><a href="#!">Link 2</a></li>
+                        <li><a href="#!">Link 3</a></li>
+                        <li><a href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container grey-text">
+                Este sitio es para fines educativos
+                <a class="right" href="#!">More Links</a>
+            </div>
         </div>
     </footer>
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./js/formulario.js"></script>
-    <script src="./js/sesion.js"></script>
-    <script src="./js/is-log.js"></script>
-    <script src="./js/logout.js"></script>
-    <script src="./js/validate-log.js"></script>
+    <script src="./js/estilos/navbar.js"></script>
+    <script src="./js/usuario/is-log.js"></script>
+    <script src="./js/usuario/logout.js"></script>
 </body>
-
 
 </html>
