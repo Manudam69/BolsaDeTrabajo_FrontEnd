@@ -3,12 +3,36 @@ var settings = {
     "url": "/is-log"
 }
 
+var curriculum = {
+    "url": "/curriculum"
+}
+
 $.get(settings).done(function(response) {
     if (response.ok) {
         toggle();
         session = true;
+        $('.nombre').html(response.user.name);
+        $('.email').html(response.user.email);
+        $('.user').html(response.user.user);
+        $('.password').html(response.user.password);
     }
 });
+
+$.get(curriculum).done(function(response) {
+    if (response.ok) {
+        $('.subir-curriculum').toggleClass('no-mostrar');
+        $('.curriculum').toggleClass('no-mostrar');
+        $('#direccion').html(response.curriculum.address);
+        $('.nombre').html(response.curriculum.name);
+        $('#telefono').html(response.curriculum.telephone);
+        $('.email').html(response.curriculum.email);
+        $('#nacimiento').html(response.curriculum.birthDate);
+        $('#pais').html(response.curriculum.country);
+        $('#profesion').html(response.curriculum.profession);
+        $('#experiencia').html(response.curriculum.experience);
+    }
+});
+
 
 $('.cerrar-sesion').on('click', function() {
     if (session) {
@@ -23,6 +47,7 @@ $('.cerrar-sesion').on('click', function() {
             if (response.ok) {
                 toggle();
                 session = false;
+                $(location).attr('href',"/");
             } else {
                 alert('Hubo un problema al cerrar sesion');
             }
@@ -30,9 +55,8 @@ $('.cerrar-sesion').on('click', function() {
     }
 });
 
-function toggle() {
+function toggle(){
     $('.iniciar-sesion').toggleClass('no-mostrar');
     $('.perfil').toggleClass('no-mostrar');
     $('.registrar-empresa').toggleClass('no-mostrar');
-
 }

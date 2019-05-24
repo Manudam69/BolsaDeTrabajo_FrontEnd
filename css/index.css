@@ -141,6 +141,13 @@ li>img {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
+.logo{
+    display: block;
+    position: absolute;
+    top: 5px;
+    margin-left: 50px;
+}
+
 /*Fin Navbar*/
 
 .busqueda {
@@ -207,6 +214,9 @@ li>img {
 }
 
 @media(max-width:568px) {
+    .logo{
+        display: none;
+    }
     .pimg2,
     .pimg3 {
         background-attachment: scroll;
