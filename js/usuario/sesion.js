@@ -7,6 +7,30 @@ var curriculum = {
     "url": "/curriculum"
 }
 
+$('.eliminar').on('click', function() {
+    if (session) {
+    var opcion = confirm("Estas seguro de que quieres borrar tu cuenta?");
+    if (opcion == true) {
+        var borrarUsuario = {
+                "url": "/delete-user",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                }
+            }
+            $.get(borrarUsuario).done(function (response) {
+                if (response.ok) {
+                    session = false;
+                    $(location).attr('href', "/");
+                } else {
+                    alert('Hubo un problema al eliminar el usuario');
+                }
+            });
+    }
+
+    }
+});
+
+
 $.get(settings).done(function(response) {
     if (response.ok) {
         toggle();
