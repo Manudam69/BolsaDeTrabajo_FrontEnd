@@ -26,7 +26,6 @@ $('.eliminar').on('click', function() {
                 }
             });
     }
-
     }
 });
 

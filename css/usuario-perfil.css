@@ -108,9 +108,14 @@ li>img {
     margin-top: 50px;
     margin-bottom: 30px;
 }
-#eliminar{
+.eliminar{
     background-color: red;
 }
+
+.eliminar:hover{
+    background-color: #a20000;
+}
+
 
 .page-footer {
     background-color: rgb(10, 3, 38);

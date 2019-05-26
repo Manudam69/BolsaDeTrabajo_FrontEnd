@@ -14,5 +14,10 @@ $('#newUser').on("click", function () {
 
     $.post(settings).done(function (response) {
         $(location).attr('href',"/login.html");
+    }).fail(function (response) {
+        $('#error-formulario').html("Por favor completa los campos faltantes");
+        console.log(response.responseJSON)
+        if(response.responseJSON.err.code == 11000)
+            $('#error-formulario').html("Usuario o correo electrónico ya registrado");
     });
 });

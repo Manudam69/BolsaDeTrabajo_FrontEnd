@@ -39,6 +39,10 @@ a{
     color: #00ff1d;
 }
 
+#error-formulario{
+    color: red;
+}
+
 @media(max-width:992px) {
     .btn-large {
         width: 100%;
