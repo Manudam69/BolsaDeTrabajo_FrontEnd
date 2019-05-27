@@ -1,16 +1,48 @@
 var session = false;
 $('#login').on("click", function () {
-    console.log($("#user").val());
-    var validar = {
+    var validarUsuario = {
         "url": "/is-validated",
         "headers": {
             "Content-Type": "application/x-www-form-urlencoded",
         },
         "data": {
-            "user": $.trim($("#user").val())
+            "email": $.trim($("#user").val())
         }
     }
-    $.post(validar).done(function(response) {
+    var validarComp = {
+        "url": "/company-validated",
+        "headers": {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        "data": {
+            "email": $.trim($("#user").val())
+        }
+    }
+
+    $.post(validarComp).done(function(response) {
+        if (response.validated){
+            var settings = {
+                "url": "/login-company",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                "data": {
+                    "email": $.trim($("#user").val()),
+                    "password": $.trim($("#contraseña").val())
+                }
+            }
+            $.post(settings).done(function (response) {
+                if (response.ok) {
+                    session = true;
+                    $(location).attr('href', "/");
+                }
+            });
+        }else{
+            alert('Tienes que verificar tu cuenta con el email enviado a tu correo electronico');
+        }
+    });
+
+    $.post(validarUsuario).done(function(response) {
         if (response.validated){
             var settings = {
                 "url": "/login",
@@ -18,7 +50,7 @@ $('#login').on("click", function () {
                     "Content-Type": "application/x-www-form-urlencoded",
                 },
                 "data": {
-                    "user": $.trim($("#user").val()),
+                    "email": $.trim($("#user").val()),
                     "password": $.trim($("#contraseña").val())
                 }
             }

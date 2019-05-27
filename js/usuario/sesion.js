@@ -36,7 +36,6 @@ $.get(settings).done(function(response) {
         session = true;
         $('.nombre').html(response.user.name);
         $('.email').html(response.user.email);
-        $('.user').html(response.user.user);
         $('.password').html(response.user.password);
     }
 });

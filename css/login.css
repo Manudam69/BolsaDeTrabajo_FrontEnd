@@ -34,9 +34,16 @@ body {
 .input-field .prefix.active {
     color: rgb(255, 255, 255);
 }
-
+.mt{
+    margin-top: 20px;
+}
 div>a{
     color: #00ff1d;
+}
+
+.collection-item{
+    color:white !important;
+    background-color:  rgb(9, 3, 34) !important;
 }
 
 @media(max-width:992px) {
