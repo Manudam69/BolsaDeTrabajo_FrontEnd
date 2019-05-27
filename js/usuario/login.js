@@ -1,6 +1,7 @@
 var session = false;
-$('#login').on("click", function () {
-    var validarUsuario = {
+$('#login-user').on("click", function () {
+    console.log($("#user").val());
+    var validar = {
         "url": "/is-validated",
         "headers": {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -9,20 +10,10 @@ $('#login').on("click", function () {
             "email": $.trim($("#user").val())
         }
     }
-    var validarComp = {
-        "url": "/company-validated",
-        "headers": {
-            "Content-Type": "application/x-www-form-urlencoded",
-        },
-        "data": {
-            "email": $.trim($("#user").val())
-        }
-    }
-
-    $.post(validarComp).done(function(response) {
-        if (response.validated){
+    $.post(validar).done(function (response) {
+        if (response.validated) {
             var settings = {
-                "url": "/login-company",
+                "url": "/login",
                 "headers": {
                     "Content-Type": "application/x-www-form-urlencoded",
                 },
@@ -37,30 +28,42 @@ $('#login').on("click", function () {
                     $(location).attr('href', "/");
                 }
             });
-        }else{
+        } else {
             alert('Tienes que verificar tu cuenta con el email enviado a tu correo electronico');
         }
     });
+});
 
-    $.post(validarUsuario).done(function(response) {
-        if (response.validated){
-            var settings = {
-                "url": "/login",
+
+$('#login-company').on("click", function () {
+    var validarcomp = {
+        "url": "/company-validated",
+        "headers": {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        "data": {
+            "email": $.trim($("#user-company").val())
+        }
+    }
+    $.post(validarcomp).done(function (response) {
+        if (response.validated) {
+            var settingscomp = {
+                "url": "/login-company",
                 "headers": {
                     "Content-Type": "application/x-www-form-urlencoded",
                 },
                 "data": {
-                    "email": $.trim($("#user").val()),
-                    "password": $.trim($("#contraseña").val())
+                    "email": $.trim($("#user-company").val()),
+                    "password": $.trim($("#contraseña-company").val())
                 }
             }
-        $.post(settings).done(function (response) {
-            if (response.ok) {
-                session = true;
-                $(location).attr('href', "/");
-            }
-        });
-        }else{
+            $.post(settingscomp).done(function (response) {
+                if (response.ok) {
+                    session = true;
+                    $(location).attr('href', "/");
+                }
+            });
+        } else {
             alert('Tienes que verificar tu cuenta con el email enviado a tu correo electronico');
         }
     });

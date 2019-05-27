@@ -53,6 +53,21 @@ div>a{
     background-color: rgb(10, 3, 38);
     color: #ffffff;
 }
+
+.tabs {
+    background-color:  rgb(10, 3, 38);
+}
+.tabs .tab a.active {
+    background-color: transparent;
+    color: #000;
+}
+.tabs .tab a.active:focus {
+    background-color: transparent;
+}
+
+.tabs .indicator {
+    background-color: rgb(255, 255, 255);
+}
 @media(max-width:992px) {
     .btn-large {
         width: 100%;

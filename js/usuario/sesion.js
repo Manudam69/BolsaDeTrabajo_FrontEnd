@@ -34,9 +34,11 @@ $.get(settings).done(function(response) {
     if (response.ok) {
         toggle();
         session = true;
+        if(response.user != null){
         $('.nombre').html(response.user.name);
         $('.email').html(response.user.email);
         $('.password').html(response.user.password);
+        }
     }
 });
 
