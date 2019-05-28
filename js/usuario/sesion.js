@@ -1,86 +1,36 @@
-var session = false;
-var settings = {
-    "url": "/is-log"
-}
-
-var curriculum = {
-    "url": "/curriculum"
-}
-
-$('.eliminar').on('click', function() {
-    if (session) {
-    var opcion = confirm("Estas seguro de que quieres borrar tu cuenta?");
-    if (opcion == true) {
-        var borrarUsuario = {
-                "url": "/delete-user",
-                "headers": {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                }
-            }
-            $.get(borrarUsuario).done(function (response) {
-                if (response.ok) {
-                    session = false;
-                    $(location).attr('href', "/");
-                } else {
-                    alert('Hubo un problema al eliminar el usuario');
-                }
-            });
+var app = angular.module('user', []);
+app.controller('myCtrl', function($scope, $http, $window) {
+  $scope.cerrar = false;
+  $scope.iniciar = true;
+  $http({
+    url: '/is-log',
+    method: 'GET',
+  }).then(function successCallback(httpResponse) {
+    console.log('response:', httpResponse.data.ok);
+    if (httpResponse.data.ok) {
+      $scope.iniciar = false;
+      $scope.cerrar = true;
+      session = false;
     }
-    }
-});
 
 
-$.get(settings).done(function(response) {
-    if (response.ok) {
-        toggle();
-        session = true;
-        if(response.user != null){
-        $('.nombre').html(response.user.name);
-        $('.email').html(response.user.email);
-        $('.password').html(response.user.password);
+  }, function errorCallback(response) {
+    console.log("fallo", response);
+  });
+
+  $scope.cerrarSesion = function() {
+    console.log('clicked cerrar sesion');
+      $http({
+        url: '/logout',
+        method: 'GET',
+      }).then(function successCallback(httpResponse) {
+        console.log('response:', httpResponse);
+        if (httpResponse.data.ok) {
+          $window.location.href = '/'
         }
-    }
+      }, function errorCallback(response) {
+        console.log("fallo", response);
+      });
+
+  }
 });
-
-$.get(curriculum).done(function(response) {
-    if (response.ok) {
-        $('.subir-curriculum').toggleClass('no-mostrar');
-        $('.curriculum').toggleClass('no-mostrar');
-        $('#direccion').html(response.curriculum.address);
-        $('.nombre').html(response.curriculum.name);
-        $('#telefono').html(response.curriculum.telephone);
-        $('.email').html(response.curriculum.email);
-        $('#nacimiento').html(response.curriculum.birthDate);
-        $('#pais').html(response.curriculum.country);
-        $('#profesion').html(response.curriculum.profession);
-        $('#experiencia').html(response.curriculum.experience);
-    }
-});
-
-
-$('.cerrar-sesion').on('click', function() {
-    if (session) {
-        var settings = {
-            "url": "/logout",
-            "headers": {
-                "Content-Type": "application/x-www-form-urlencoded",
-            }
-        }
-
-        $.get(settings).done(function(response) {
-            if (response.ok) {
-                toggle();
-                session = false;
-                $(location).attr('href',"/");
-            } else {
-                alert('Hubo un problema al cerrar sesion');
-            }
-        });
-    }
-});
-
-function toggle(){
-    $('.iniciar-sesion').toggleClass('no-mostrar');
-    $('.perfil').toggleClass('no-mostrar');
-    $('.registrar-empresa').toggleClass('no-mostrar');
-}

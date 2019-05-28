@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <link rel="stylesheet" href="./css/signup-company.css">
 </head>
 
-<body>
-    <div class="container elementos">
+<body ng-app="company">
+    <div class="container elementos" ng-controller="myCtrl">
         <div class="row center">
             <a href="./index.html"><img src="./images/elfarolito.png" class="responsive-img" width="100"></a>
         </div>
@@ -31,49 +33,53 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">account_box</i>
-                <input id="name" type="text" style="color: white;">
+                <input id="name" type="text" style="color: white;" ng-model="data.name">
                 <label for="name">Nombres</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">business</i>
-                <input id="company-name" type="text" style="color: white;">
+                <input id="company-name" type="text" style="color: white;" ng-model="data.companyName">
                 <label for="company-name">Nombre de la empresa</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>
-                <input id="email" type="email" style="color: white;">
+                <input id="email" type="email" style="color: white;" ng-model="data.email">
                 <label for="email">Correo electrónico</label>
             </div>
         </div>
          <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">verified_user</i>
-                <input id="cuit" type="text" style="color: white;">
-                <label for="cuit">CUIT de la empresa</label>
+                <input id="rfc" type="text" style="color: white;" ng-model="data.rfc">
+                <label for="rfc">RFC de la empresa</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">phone</i>
-                <input id="telephone" type="tel" style="color: white;">
+                <input id="telephone" type="tel" style="color: white;" ng-model="data.telephone">
                 <label for="telephone">Telefono</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">spellcheck</i>
-                <input id="sat" type="text" style="color: white;">
+                <input id="sat" type="text" style="color: white;" ng-model="data.sat">
                 <label for="sat">Razón Social registrada ante el SAT</label>
             </div>
         </div>
-        
+        <div class="row">
+            <div class="col s12 center m-0">
+                <p id="error-formulario" ng-show="error">Empresa o correo ya registrado</p>
+            </div>
+        </div>
         <div class="row">
             <div class="col s12">
-                <a class="waves-effect waves-light btn-large" id="newCompany">registrar empresa</a>
+                <a class="waves-effect waves-light btn-large" id="newCompany" ng-click="submit()">registrar empresa</a>
             </div>
         </div>
         <div class="row center">
@@ -82,7 +88,7 @@
         <hr>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script src="./js/usuario/registro.js"></script>
 </body>
 
 </html>

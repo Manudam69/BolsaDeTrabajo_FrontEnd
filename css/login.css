@@ -68,6 +68,10 @@ div>a{
 .tabs .indicator {
     background-color: rgb(255, 255, 255);
 }
+
+#error-formulario{
+    color: red;
+}
 @media(max-width:992px) {
     .btn-large {
         width: 100%;

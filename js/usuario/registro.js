@@ -1,48 +1,39 @@
-$('#newUser').on("click", function () {
-    var settings = {
-        "url": "/signup",
-        "headers": {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        "data": {
-            "name": $.trim($("#name").val()),
-            "user": $.trim($("#user").val()),
-            "email": $.trim($("#email").val()),
-            "password": $.trim($("#contraseña").val())
-        }
-    };
-
-    $.post(settings).done(function (response) {
-        $(location).attr('href',"/login.html");
-    }).fail(function (response) {
-        $('#error-formulario').html("Por favor completa los campos faltantes");
-        console.log(response.responseJSON)
-        if(response.responseJSON.err.code == 11000)
-            $('#error-formulario').html("Usuario o correo electrónico ya registrado");
+var app = angular.module('user', []);
+app.controller('myCtrl', function($scope, $http, $window) {
+  $scope.error = false;
+  $scope.data = {};
+  $scope.submit = function() {
+    console.log('clicked submit');
+    $http({
+      url: '/signup',
+      method: 'POST',
+      data: $scope.data
+    }).then(function successCallback(httpResponse) {
+      console.log('response:', httpResponse);
+      $window.location.href = '/login.html'
+    },function errorCallback(response){
+        console.log("fallo",response);
+         $scope.error = true;
     });
+  }
 });
 
-$('#newCompany').on("click", function () {
-    var settings = {
-        "url": "/signup-company",
-        "headers": {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        "data": {
-            "name": $.trim($("#name").val()),
-            "user": $.trim($("#user").val()),
-            "email": $.trim($("#email").val()),
-            "password": $.trim($("#contraseña").val())
-        }
-    };
-
-    $.post(settings).done(function (response) {
-        $(location).attr('href',"/login.html");
-    }).fail(function (response) {
-        $('#error-formulario').html("Por favor completa los campos faltantes");
-        console.log(response.responseJSON)
-        if(response.responseJSON.err.code == 11000)
-            $('#error-formulario').html("Usuario o correo electrónico ya registrado");
+var app = angular.module('company', []);
+app.controller('myCtrl', function($scope, $http, $window) {
+  $scope.data = {};
+  $scope.error = false;
+  $scope.submit = function() {
+    console.log('clicked submit');
+    $http({
+      url: '/signup-company',
+      method: 'POST',
+      data: $scope.data
+    }).then(function successCallback(httpResponse) {
+      console.log('response:', httpResponse);
+      $window.location.href = '/login.html'
+    },function errorCallback(response){
+        console.log("fallo",response);
+        $scope.error = true;
     });
+  }
 });
-

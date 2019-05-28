@@ -39,6 +39,11 @@ a{
     color: #00ff1d;
 }
 
+.m-0{
+  margin: 0;
+  padding: 0;
+}
+
 #error-formulario{
     color: red;
 }
