@@ -1,22 +1,27 @@
-var session = false;
-
 var app = angular.module('user', []);
-app.controller('myCtrl', function($scope, $http, $window) {
-  $scope.error = false;
-  $scope.data = {};
-  $scope.submit = function() {
-    console.log('clicked submit');
+app.controller('myCtrl', function ($scope, $http, $window) {
+    $scope.data = {};
+    $scope.submit = function () {
+        $http({
+            url: '/login',
+            method: 'POST',
+            data: $scope.data
+        }).then(function successCallback(httpResponse) {
+            console.log('response:', httpResponse);
+            $window.location.href = '/'
+        }, function errorCallback(response) {
+            console.log("fallo", response.data.msg);
+            var msg;
+            $scope.msg = response.data.msg;
+        });
+    };
+
     $http({
-      url: '/login',
-      method: 'POST',
-      data: $scope.data
+        url: '/is-log',
+        method: 'GET',
     }).then(function successCallback(httpResponse) {
-      session = true;
-      console.log('response:', httpResponse);
-      $window.location.href = '/'
-    },function errorCallback(response){
-      $scope.error = true;
-        console.log("fallo",response);
+        if (httpResponse.data.ok) {
+            $window.location.href = '/'
+        }
     });
-  }
 });

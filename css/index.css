@@ -213,6 +213,9 @@ li>img {
     }
 }
 
+a{
+    color: #00ff1d;
+}
 @media(max-width:568px) {
     .logo{
         display: none;
