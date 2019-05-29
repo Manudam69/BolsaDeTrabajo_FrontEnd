@@ -10,7 +10,6 @@ app.controller('myCtrl', function ($scope, $http, $window) {
         $scope.name = "El farolito";
         $scope.email = "Bolsa de trabajo";
         if (httpResponse.data.ok && httpResponse.data.user.type == "user") {
-            var name, email, password;
             //información en el perfil del usuario
             $scope.name = httpResponse.data.user.name;
             $scope.email = httpResponse.data.user.email;
@@ -33,6 +32,13 @@ app.controller('myCtrl', function ($scope, $http, $window) {
         if (httpResponse.data.ok) {
             $scope.curriculum = true;
             $scope.subirCurriculum = false;
+            console.log()
+            $scope.direccion = httpResponse.data.curriculum.address;
+            $scope.nacimiento = httpResponse.data.curriculum.birthDate;
+            $scope.telefono = httpResponse.data.curriculum.telephone;
+            $scope.experiencia = httpResponse.data.curriculum.experience;
+            $scope.profesion = httpResponse.data.curriculum.profession;
+            $scope.pais = httpResponse.data.curriculum.country;
         }
     }, function errorCallback(response) {
         console.log("fallo", response);

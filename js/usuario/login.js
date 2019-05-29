@@ -11,7 +11,6 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             $window.location.href = '/'
         }, function errorCallback(response) {
             console.log("fallo", response.data.msg);
-            var msg;
             $scope.msg = response.data.msg;
         });
     };
