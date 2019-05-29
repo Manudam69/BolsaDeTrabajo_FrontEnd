@@ -69,7 +69,7 @@ div>a{
     background-color: rgb(255, 255, 255);
 }
 
-#error-formulario{
+.error-formulario{
     color: red;
 }
 @media(max-width:992px) {

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" ng-app="user">
+<html lang="es" ng-app="user" ng-app="islog">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -18,11 +18,12 @@
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="./css/usuario-perfil.css">
 
 
 </head>
-<body ng-controller="myCtrl">
+<body ng-controller="myCtrl" ng-controller="controlador">
 <header>
     <ul id="perfil" class="dropdown-content">
         <li><a href="./usuario-perfil.html"><i class="material-icons right">settings</i>Configuración de Perfil</a></li>
@@ -197,5 +198,6 @@
 <script src="./js/estilos/navbar.js"></script>
 <script src="./js/estilos/modal.js"></script>
 <script src="./js/usuario/sesion.js"></script>
+<script src="./js/usuario/redirect-unlogin.js"></script>
 </body>
 </html>

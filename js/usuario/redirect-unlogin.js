@@ -3,7 +3,7 @@ var settings = {
 }
 
 $.get(settings).done(function (response) {
-    if (response.ok) {
-        $(location).attr('href',"/");
+    if (!response.ok) {
+        $(location).attr('href',"/login.html");
     }
 });
