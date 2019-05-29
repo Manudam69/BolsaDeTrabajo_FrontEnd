@@ -42,8 +42,7 @@
                         class="material-icons right">business</i></a></li>
                 <li id="sesion-web" class="iniciar-sesion" ng-show="iniciar"><a href="./login.html">Iniciar sesión<i
                         class="material-icons right">account_circle</i></a></li>
-                <li class="perfil" ng-show="cerrar"><a class="dropdown-trigger" href="#!" data-target='perfil'>Mi perfil<i
-                        class="material-icons right">account_circle</i></a></li>
+                <li class="perfil" ng-show="cerrar"><a class="dropdown-trigger" href="#!" data-target='perfil'>Mi perfil<i class="material-icons right">account_circle</i></a></li>
             </ul>
         </div>
     </nav>
@@ -150,10 +149,22 @@
     <div class="row container center">
         <div class="col l12 s12">
             <p>Eliminar cuenta</p>
-            <a class="waves-effect waves-light btn-large eliminar">Eliminar cuenta</a>
+            <a class="waves-effect waves-light btn-large eliminar modal-trigger" href="#modal1">Eliminar cuenta</a>
             <p class="grey-text lighten-2">Al eliminar tu cuenta toda tu información se perdera de nuestro sistema.</p>
         </div>
     </div>
+
+    <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Eliminacion de cuenta</h4>
+      <p>¿Estas completamente seguro de eliminar tu cuenta? <br>
+        Al eliminar tu cuenta toda tu información se perdera de nuestro sistema.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-close waves-effect waves-green btn-flat" ng-click="eliminar()">Confirmar</a>
+    </div>
+  </div>
 </div>
 
 <footer class="page-footer">
@@ -184,6 +195,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./js/estilos/navbar.js"></script>
+<script src="./js/estilos/modal.js"></script>
 <script src="./js/usuario/sesion.js"></script>
 </body>
 </html>

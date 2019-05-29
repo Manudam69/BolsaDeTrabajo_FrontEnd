@@ -9,6 +9,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
     }).then(function successCallback(httpResponse) {
         $scope.name = "El farolito";
         $scope.email = "Bolsa de trabajo";
+        console.log(httpResponse.data.user.type);
         if (httpResponse.data.ok && httpResponse.data.user.type == "user") {
             //información en el perfil del usuario
             $scope.name = httpResponse.data.user.name;
@@ -59,5 +60,18 @@ app.controller('myCtrl', function ($scope, $http, $window) {
         });
     }
 
+    $scope.eliminar = function (){
+      $http({
+          url: '/delete-user',
+          method: 'GET',
+      }).then(function successCallback(httpResponse) {
+          console.log('response:', httpResponse);
+          if (httpResponse.data.ok) {
+              $window.location.href = '/';
+          }
+      }, function errorCallback(response) {
+          console.log("fallo", response);
+      });
+    }
 
 });

@@ -23,4 +23,18 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             $window.location.href = '/'
         }
     });
+
+
+    $scope.loginCompany = function () {
+        $http({
+            url: '/login-company',
+            method: 'POST',
+            data: $scope.data
+        }).then(function successCallback(httpResponse) {
+            $window.location.href = '/'
+        }, function errorCallback(response) {
+            console.log("fallo", response.data.msg);
+            $scope.ms = response.data.msg;
+        });
+    };
 });

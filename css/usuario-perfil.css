@@ -126,6 +126,16 @@ li>img {
     display: none;
 }
 
+.modal{
+  background-color: rgb(10, 3, 38);
+}
+.modal-footer>a{
+  color: red;
+}
+
+.modal-footer{
+  background-color: white !important;
+}
 @media(max-width:992px) {
     .btn-large {
         width: 100%;
