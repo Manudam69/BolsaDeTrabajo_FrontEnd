@@ -44,11 +44,9 @@ body {
 
 .row .input-field textarea:focus {
     border-bottom: 1px solid rgb(255, 255, 255) !important;
-    -webkit-box-shadow: 0 1px 0 0 rgb(255, 255, 255) !im  portant;
+    -webkit-box-shadow: 0 1px 0 0 rgb(255, 255, 255) !important;
     box-shadow: 0 1px 0 0 rgb(16, 114, 239) !important;
 }
-
-
 
 .forms{
   margin-top: 10vh;
