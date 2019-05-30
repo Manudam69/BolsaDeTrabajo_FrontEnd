@@ -2,7 +2,6 @@ var app = angular.module('user', []);
 app.controller('myCtrl', function ($scope, $http, $window) {
     $scope.cerrar = false;
     $scope.iniciar = true;
-
     $http({
         url: '/is-log',
         method: 'GET',

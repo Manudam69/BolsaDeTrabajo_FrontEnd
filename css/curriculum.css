@@ -1,0 +1,79 @@
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+    background: rgb(18, 18, 18);
+    color: white;
+}
+
+.img{
+ margin: 0;
+ padding: 0;
+ left: 0;
+ position: sticky;
+}
+
+.contenedor{
+    /* la imagen a ser mostrada a pantalla completa */
+    background:url('../images/curriculum-fondo.jpg') no-repeat center center;
+    /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
+    min-height:100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* Propiedad a utilizar para la imagen */
+    background-size:cover;
+}
+
+.input-field input:focus + label {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* label underline focus color */
+
+.row .input-field input:focus {
+    border-bottom: 1px solid rgb(255, 255, 255) !important;
+    -webkit-box-shadow: 0 1px 0 0 rgb(255, 255, 255) !important;
+    box-shadow: 0 1px 0 0 rgb(16, 114, 239) !important;
+}
+.input-field textarea:focus + label {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* label underline focus color */
+
+.row .input-field textarea:focus {
+    border-bottom: 1px solid rgb(255, 255, 255) !important;
+    -webkit-box-shadow: 0 1px 0 0 rgb(255, 255, 255) !im  portant;
+    box-shadow: 0 1px 0 0 rgb(16, 114, 239) !important;
+}
+
+
+
+.forms{
+  margin-top: 10vh;
+}
+
+.input-field .prefix.active {
+    color: rgb(255, 255, 255);
+}
+
+.btn-large {
+    background-color: rgb(10, 3, 38);
+}
+
+.btn-large:hover {
+    background-color: rgb(9, 3, 34);
+}
+#error-formulario{
+    color: red;
+}
+
+@media(max-width:568px) {
+  .forms{
+    margin-top:0;
+  }
+  .contenedor{
+    display: none;
+  }
+}

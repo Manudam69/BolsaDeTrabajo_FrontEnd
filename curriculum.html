@@ -1,25 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inicio</title>
-    <link rel="icon" type="image/png" href="./images/favicon.png">
-    <!--Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inicio</title>
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <!--Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./js/usuario/redirect-unlogin.js"></script>
+  <link rel="stylesheet" href="./css/curriculum.css">
 </head>
-<body>
+<body ng-app="user">
+  <div class="row" style="margin:0; padding:0;">
+    <div class="col l4 m4 hide-on-small-only contenedor">
+    </div>
+    <div class="col l6 m6 forms center" ng-controller="myCtrl">
+      <h3 class="center">CURRICULUM</h3>
+      <hr>
+      <div class="row">
+        <div class="input-field col l6 s12">
+          <i class="material-icons prefix">location_city</i>
+          <input id="direccion-company" type="text" style="color: white;" ng-model="data.address">
+          <label for="direccion-company">Dirección</label>
+        </div>
+        <div class="input-field col l6 s12">
+          <i class="material-icons prefix">phone_android</i>
+          <input id="telefono-company" type="text" style="color: white;" ng-model="data.telephone">
+          <label for="telefono-company">Telefono</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l6 s12" style="color: black">
+          <i class="material-icons prefix" style="color: white">face</i>
+            <input id="nacimiento-company" type="text" class="datepicker" ng-model="data.birthDate" style="color: white">
+          <label for="nacimiento-company" style="color: white">Fecha de nacimiento</label>
+        </div>
+        <div class="input-field col l6 s12">
+          <i class="material-icons prefix">location_on</i>
+          <input id="pais-company" type="text" style="color: white;" ng-model="data.country">
+          <label for="pais-company">Pais de residencia</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l12 s12">
+          <i class="material-icons prefix">school</i>
+          <input id="titulo-company" type="text" style="color: white;" ng-model="data.profession">
+          <label for="titulo-company">Titulo</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col l12 s12">
+          <i class="material-icons prefix">work</i>
+          <textarea id="experience" class="materialize-textarea" style="color: white;" ng-model="data.experience"></textarea>
+          <label for="experience">Habla un poco sobre tus habilidades</label>
+        </div>
+      </div>
+      <div class="row">
+        <p id="error-formulario">{{msg}}</p>
+      </div>
+      <div class="row">
+        <a class="waves-effect waves-light btn-large" ng-click="subir()">SUBIR CURRICULUM</a>
+      </div>
 
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/js/estilos/datepicker.js"></script>
+  <script src="./js/usuario/subir-curriculum.js"></script>
+  <script src="./js/usuario/redirect-unlogin.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
