@@ -8,12 +8,25 @@ app.controller('myCtrl', function ($scope, $http, $window) {
     }).then(function successCallback(httpResponse) {
         $scope.name = "El farolito";
         $scope.email = "Bolsa de trabajo";
-        console.log(httpResponse.data.user.type);
-        if (httpResponse.data.ok && httpResponse.data.user.type == "user") {
+        if (httpResponse.data.ok && httpResponse.data.user != null) {
             //información en el perfil del usuario
             $scope.name = httpResponse.data.user.name;
             $scope.email = httpResponse.data.user.email;
             $scope.password = httpResponse.data.user.password;
+            //cambio de botones en el navbar al detectar sesión
+            $scope.iniciar = false;
+            $scope.cerrar = true;
+            session = false;
+        }
+    }, function errorCallback(response) {
+        console.log("fallo", response);
+    });
+
+    $http({
+        url: '/whoami',
+        method: 'GET',
+    }).then(function successCallback(httpResponse) {
+        if (httpResponse.data.ok && httpResponse.data.company != null) {
             //cambio de botones en el navbar al detectar sesión
             $scope.iniciar = false;
             $scope.cerrar = true;
@@ -32,7 +45,6 @@ app.controller('myCtrl', function ($scope, $http, $window) {
         if (httpResponse.data.ok) {
             $scope.curriculum = true;
             $scope.subirCurriculum = false;
-            console.log()
             $scope.direccion = httpResponse.data.curriculum.address;
             $scope.nacimiento = httpResponse.data.curriculum.birthDate;
             $scope.telefono = httpResponse.data.curriculum.telephone;
@@ -50,7 +62,6 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             url: '/logout',
             method: 'GET',
         }).then(function successCallback(httpResponse) {
-            console.log('response:', httpResponse);
             if (httpResponse.data.ok) {
                 $window.location.href = '/';
             }
@@ -64,7 +75,6 @@ app.controller('myCtrl', function ($scope, $http, $window) {
           url: '/delete-user',
           method: 'GET',
       }).then(function successCallback(httpResponse) {
-          console.log('response:', httpResponse);
           if (httpResponse.data.ok) {
               $window.location.href = '/';
           }
@@ -72,5 +82,4 @@ app.controller('myCtrl', function ($scope, $http, $window) {
           console.log("fallo", response);
       });
     }
-
 });
