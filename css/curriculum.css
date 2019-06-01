@@ -5,26 +5,24 @@ body {
     background: rgb(18, 18, 18);
     color: white;
 }
-
-.img{
- margin: 0;
- padding: 0;
- left: 0;
- position: sticky;
+.img {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    position: -webkit-sticky;
+    position: sticky;
 }
-
-.contenedor{
+.contenedor {
     /* la imagen a ser mostrada a pantalla completa */
-    background:url('../images/curriculum-fondo.jpg') no-repeat center center;
+    background: url('../images/curriculum-fondo.jpg') no-repeat center center;
     /* nos aseguramos que el elemento ocupe toda la ventana del navegador */
-    min-height:100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     height: 100vh;
     /* Propiedad a utilizar para la imagen */
-    background-size:cover;
+    background-size: cover;
 }
-
 .input-field input:focus + label {
     color: rgb(255, 255, 255) !important;
 }
@@ -51,27 +49,29 @@ body {
 .forms{
   margin-top: 5vh;
 }
-
 .input-field .prefix.active {
     color: rgb(255, 255, 255);
 }
-
 .btn-large {
     background-color: rgb(10, 3, 38);
 }
-
 .btn-large:hover {
     background-color: rgb(9, 3, 34);
 }
-#error-formulario{
+#error-formulario {
     color: red;
 }
-
+forms {
+    margin: 0;
+    padding: 0;
+}
 @media(max-width:568px) {
-  .forms{
-    margin-top:0;
-  }
-  .contenedor{
-    display: none;
-  }
+    .forms {
+        margin: 0;
+        margin-top: 5vh;
+        padding: 0;
+    }
+    .contenedor {
+        display: none;
+    }
 }

@@ -2,145 +2,70 @@
 <html lang="es" ng-app="user">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Iniciar sesión</title>
-  <link rel="icon" type="image/png" href="./images/favicon.png">
-  <!--Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
-  <!-- AngularJS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-  <link rel="stylesheet" href="./css/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iniciar sesión</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <!--Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <link rel="stylesheet" href="./css/login.css">
 
 
 </head>
 
 <body ng-controller="myCtrl">
-  <div class="container row center">
-    <div class="col l12 s12 mt">
-      <h4>Bienvenido al inicio de sesión de el farolito</h4>
-      <hr>
-    </div>
-  </div>
-
-  <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
-    <li class="tab"><a href="#tab1" class="white-text">Usuarios</a></li>
-    <li class="tab"><a href="#tab2" class="white-text">Empresas</a></li>
-  </ul>
-  <div id="tab1" class="col s12">
     <div class="container">
-      <div class="container login">
-        <h5 class="center">Inicio de sesión de usuarios</h5>
-        <div class="row mt">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">account_circle</i>
-            <input id="user" type="email" style="color: white;" ng-model="data.email">
-            <label for="user">Correo electrónico</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">lock</i>
-            <input id="contraseña" type="password" style="color: white;" ng-model="data.password">
-            <label for="contraseña">Contraseña</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 center m-0">
-            <p  class="error-formulario">{{msg}}</p>
-          </div>
-        </div>
+        <div class="container login">
+            <div class="row center">
+                <a href="./index.html"><img src="./images/elfarolito.png" class="responsive-img" width="100"></a>
+            </div>
+            <h5 class="center">Inicio de sesión</h5>
+            <div class="row mt">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="user" type="email" style="color: white;" ng-model="data.email">
+                    <label for="user">Correo electrónico</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">lock</i>
+                    <input id="contraseña" type="password" style="color: white;" ng-model="data.password">
+                    <label for="contraseña">Contraseña</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 center m-0">
+                    <p class="error-formulario">{{msg}}</p>
+                </div>
+            </div>
 
-        <div class="row">
-          <div class="col s12">
-            <a class="waves-effect waves-light btn-large" id="login-user" ng-click="submit()">iniciar sesión</a>
-          </div>
-        </div>
+            <div class="row">
+                <div class="col s12">
+                    <a class="waves-effect waves-light btn-large" id="login-user" ng-click="submit()">iniciar sesión</a>
+                </div>
+            </div>
 
-        <div class="row center">
-          <p>¿Eres nuevo en El farolito?</p>
-          <a href="./signup.html">Crear tu cuenta en el farolito</a>
+            <div class="row center">
+                <p>¿Eres nuevo en El farolito?</p>
+                <a href="./signup.html">Crear tu cuenta en el farolito</a>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="tab2" class="col s12">
-    <div class="container">
-      <div class="container login">
-        <h5 class="center">Inicio de sesión de empresas</h5>
-        <div class="row mt">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">account_circle</i>
-            <input id="user-company" type="email" style="color: white;" ng-model="data.email">
-            <label for="user-company">Correo electrónico</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">lock</i>
-            <input id="contraseña-company" type="password" style="color: white;" ng-model="data.password">
-            <label for="contraseña-company">Contraseña</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 center m-0">
-            <p class="error-formulario"> {{ms}} </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col s12">
-            <a class="waves-effect waves-light btn-large" id="login-company" ng-click="loginCompany()">INICIAR SESIÓN</a>
-          </div>
-        </div>
-
-        <div class="row center">
-          <p>¿Eres nuevo en El farolito?</p>
-          <a href="./signup-company.html">Registra tu empresa en el farolito</a>
-        </div>
-      </div>
     </div>
 
-  </div>
-
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="">Footer Content</h5>
-          <p class="">You can use rows and columns here to organize your footer content.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5>Links</h5>
-          <ul>
-            <li><a href="#!">Link 1</a></li>
-            <li><a href="#!">Link 2</a></li>
-            <li><a href="#!">Link 3</a></li>
-            <li><a href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container grey-text">
-        Este sitio es para fines educativos
-        <a class="right" href="#!">More Links</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./js/estilos/tabs.js"></script>
-  <script src="./js/usuario/login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/estilos/tabs.js"></script>
+    <script src="./js/usuario/login.js"></script>
 </body>
 
 </html>

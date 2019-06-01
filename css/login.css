@@ -4,7 +4,6 @@
 body {
     background: rgb(18, 18, 18);
     color: white;
-    height: 100vh;
 }
 .btn-large {
     width: 100%;
@@ -16,6 +15,10 @@ body {
 }
 .elementos {
     width: 380px;
+}
+.login {
+    width: 350px;
+    margin-top: 13vh;
 }
 
 /* label focus color */
@@ -34,28 +37,25 @@ body {
 .input-field .prefix.active {
     color: rgb(255, 255, 255);
 }
-.mt{
+.mt {
     margin-top: 20px;
 }
-div>a{
+div>a {
     color: #00ff1d;
 }
-.espacio{
+.espacio {
     height: 40vh;
 }
-
-.collection-item{
-    color:white !important;
-    background-color:  rgb(9, 3, 34) !important;
+.collection-item {
+    color: white !important;
+    background-color: rgb(9, 3, 34) !important;
 }
-
 .page-footer {
     background-color: rgb(10, 3, 38);
     color: #ffffff;
 }
-
 .tabs {
-    background-color:  rgb(10, 3, 38);
+    background-color: rgb(10, 3, 38);
 }
 .tabs .tab a.active {
     background-color: transparent;
@@ -64,12 +64,10 @@ div>a{
 .tabs .tab a.active:focus {
     background-color: transparent;
 }
-
 .tabs .indicator {
     background-color: rgb(255, 255, 255);
 }
-
-.error-formulario{
+.error-formulario {
     color: red;
 }
 @media(max-width:992px) {
