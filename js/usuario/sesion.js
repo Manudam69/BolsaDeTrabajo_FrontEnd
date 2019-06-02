@@ -16,6 +16,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             $scope.password = httpResponse.data.user.password;
             $scope.eliminarUsuario = true;
             $scope.eliminarEmpresa = false;
+            $scope.subirVacante = false;
             //cambio de botones en el navbar al detectar sesión
             $scope.iniciar = false;
             $scope.cerrar = true;
@@ -50,6 +51,20 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             $scope.email = httpResponse.data.user.email;
             $scope.iniciar = false;
             $scope.cerrar = true;
+
+            $http({
+                url: '/job',
+                method: 'GET',
+            }).then(function successCallback(httpResponse) {
+                $scope.curriculum = false;
+                $scope.subirCurriculum = true;
+                if (httpResponse.data.ok) {
+                    $scope.subirVacante = false;
+                    $scope.verVacante = true;
+                }
+            }, function errorCallback(response) {
+                console.log("fallo", response);
+            });
         }
 
     }, function errorCallback(response) {
