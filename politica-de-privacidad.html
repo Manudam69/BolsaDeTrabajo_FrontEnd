@@ -1,0 +1,300 @@
+<!doctype html >
+<html lang="es" ng-app="user">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Politicas de privacidad</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <!--Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <link rel="stylesheet" href="css/privacidad.css">
+</head>
+<body ng-controller="myCtrl">
+<header>
+    <ul id="perfil" class="dropdown-content">
+        <li><a href="./usuario-perfil.html"><i class="material-icons right">settings</i>Configuración de Perfil</a></li>
+        <li class="cerrar-sesion" ng-click="cerrarSesion()"><a href="#!"><i class="fas fa-sign-out-alt right"></i>Cerrar
+            Sesión</a></li>
+    </ul>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="./index.html" class="logo"><img src="./images/elfarolito.png" class="responsive-img"
+                                                     width="60"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down elementos">
+                <li><a href="sass.html">Perfiles laborales<i class="material-icons right">contacts</i></a></li>
+                <li><a href="badges.html">Perfiles de empresas<i class="material-icons right">business_center</i></a>
+                </li>
+                <li class="registrar-empresa"><a href="./signup-company.html" ng-show="iniciar">Registrar mi empresa<i
+                        class="material-icons right">business</i></a></li>
+                <li id="sesion-web" class="iniciar-sesion" ng-show="iniciar"><a href="./login.html">Iniciar sesión<i
+                        class="material-icons right">account_circle</i></a></li>
+                <li class="perfil" ng-show="cerrar"><a class="dropdown-trigger" href="#!" data-target='perfil'>Mi perfil<i
+                        class="material-icons right">account_circle</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="./images/fondo-navbar.jpg" alt="imagen de perfil">
+                </div>
+                <a href="#" class="center-align"><img src="../images/elfarolito.png" class="circle"></a>
+                <a class="mt-0"><span class=" name white-text">{{name}} </span> </a>
+                <a class="mt-0"><span class="id white-text"> {{email}}</span></a>
+            </div>
+        </li>
+
+        <li><a href="sass.html"><i class="material-icons">contacts</i>Perfiles laborales</a></li>
+        <li><a href="badges.html"><i class="material-icons">business_center</i>Perfiles de empresas</a></li>
+        <li class="registrar-empresa" ng-show="iniciar"><a href="./signup-company.html"><i class="material-icons">business</i>Registrar
+            mi empresa</a></li>
+        <li class="perfil" ng-show="cerrar"><a href="./usuario-perfil.html"><i class="material-icons">settings</i>Configuración
+            de Perfil</a></li>
+        <li id="sesion-cel" class="iniciar-sesion" ng-show="iniciar"><a href="./login.html"><i class="material-icons">account_circle</i>Iniciar
+            sesión</a></li>
+        <li class="cerrar-sesion perfil" ng-show="cerrar" ng-click="cerrarSesion()"><a href="#!"><i
+                class="material-icons">account_circle</i>Cerrar sesión</a></li>
+    </ul>
+</header>
+
+<div class="container contenido">
+    <h4 class="titulo center">POLÍTICA DE PRIVACIDAD</h4>
+    <br>
+    <h5>1. NUESTRO COMROMISO CON LA PRIVACIDAD</h5>
+
+    <p>Las empresas indicadas en la cláusula 12, sus empresas afiliadas,
+        subsidiarias o controladoras (en adelante “<b><u>NAVENT</u></b>”), respetan la privacidad de toda persona que
+        visite el sitio web enunciado en la cláusula 12(en adelante, el
+        "<b><u>Sitio Web</u></b>").</p>
+
+    <p>Esta Política de Privacidad indica la información que NAVENT puede recopilar y el uso que puede dar a esa
+        información. También explica las medidas de seguridad tomadas para proteger su información, su posibilidad de
+        acceder a su información, y a quién podrá contactar en NAVENT para que sus preguntas en relación con esta
+        Política de Privacidad sean contestadas.</p>
+
+    <h5>2. RECOPILACIÓN Y UTILIZACIÓN DE SU INFORMACIÓN</h5>
+
+    <p>2.1. Esta Política de Privacidad contempla la recopilación y uso de información personal en el Sitio Web.</p>
+
+    <p>2.2. NAVENT no recopilará a través del Sitio Web ninguna información sobre usted que pueda identificarlo
+        personalmente, como, por ejemplo, su nombre, dirección, número de teléfono o dirección de correo electrónico (en
+        adelante, la &quot; <span class="bold">Información Personal</span> &quot;), a menos que usted nos la brinde en
+        forma voluntaria. Si usted no desea que recopilemos su Información Personal, por favor absténgase de
+        proporcionarla. Sin embargo, deberá tener en cuenta que en caso de no proporcionarnos su Información Personal,
+        no podrá acceder a los servicios e información disponibles a través del Sitio Web.</p>
+    <p>2.3. En caso de que usted nos brinde Información Personal, le comunicamos que esa Información Personal será
+        objeto de tratamiento automatizado e incorporada a la base de datos de NAVENT.</p>
+    <p>2.4. NAVENT en ningún momento recopilará información sensible sobre usted.</p>
+    <h5>3. INFORMACIÓN PERSONAL</h5>
+    <p>3.1. NAVENT recopila Información Personal en línea cuando, entre otros casos:</p>
+    <p>- Usted se registra para hacer uso de alguno de los servicios disponibles del Sitio Web.</p>
+    <p>- Usted utiliza el Sitio Web.</p>
+    <p>- Usted nos envía preguntas, consultas o comentarios o se contacta con el Sitio Web.</p>
+    <p>- Usted solicita información o materiales.</p>
+    <p>- Usted provee de cualquier forma información al Sitio Web (chats, foros, uploads, etc.).</p>
+    <p>3.2. El tipo de información recopilada puede incluir nombre, tipo y número de documento, teléfono, dirección de
+        correo electrónico y/o cualquier otra información que permita individualizarlo. En todos los casos que usted
+        brinde Información Personal, y de acuerdo a la legislación vigente, usted declara que la Información Personal
+        brindada es correcta, cierta y actual.</p>
+    <p>3.3. En los casos que nos brinde su Información Personal, usted acepta y presta su consentimiento libre, expreso
+        e informado para que dicha Información Personal sea utilizada con las finalidades arriba mencionadas y autoriza
+        a que la misma sea tratada, almacenada, recopilada en las bases de datos de propiedad de NAVENT. En tal sentido,
+        usted autoriza a que su Información Personal sea compartida con los clientes de NAVENT. Asimismo, usted acepta y
+        presta su consentimiento libre, expreso e informado con los términos de la presente Política de Privacidad.</p>
+    <h5>4. CORREO ELECTRÓNICO</h5>
+
+    <p>4.1. NAVENT podrá enviarle correos electrónicos en relación con el contenido del Sitio Web, los servicios
+        prestados por NAVENT o sobre su cuenta y en respuesta a sus preguntas, pedidos, consultas o comentarios. NAVENT
+        también le podrá enviar correos electrónicos con información sobre productos y servicios ofrecidos por NAVENT
+        y/o terceros asociados comercialmente que le puedan resultar de interés, a menos que usted indique expresamente
+        que no desea recibir dichos correos electrónicos a través de los procesos implementados por NAVENT a tal
+        efecto.</p>
+
+    <p>4.2. Usted podrá solicitar en cualquier momento el retiro o bloqueo de su nombre de la base de datos a la que se
+        refiere la presente Política de Privacidad siguiendo el procedimiento señalado en esta misma política.</p>
+    <p>4.3. Todo correo electrónico que reciba de NAVENT le informará cómo rechazar el envío de futuros correos
+        electrónicos promocionales. Asimismo, usted podrá cambiar sus preferencias de recepción de correos electrónicos
+        publicitarios a través de la configuración de su cuenta en el propio Sitio Web en cualquier momento.</p>
+    <h5>5. OTRA INFORMACIÓN - COOKIES</h5>
+
+    <p>Cuando usted ingresa en el Sitio Web podemos almacenar alguna información en su computadora bajo la forma de
+        “Cookie” o archivo similar que puede sernos útil de varias formas. Con la mayoría de los exploradores para
+        Internet, usted puede borrar las Cookies del disco rígido de su computadora, bloquear todas las Cookies o
+        recibir un mensaje de alerta antes de que se almacene una Cookie. Por favor, consulta las instrucciones de su
+        explorador para conocer más sobre estas funciones.</p>
+
+    <h5>6. COMPARTIENDO SU INFORMACIÓN</h5>
+
+    <p>La Información Personal que usted suministre será reputada y tratada como confidencial. Sin perjuicio de lo
+        expuesto, NAVENT podrá compartir total o parcialmente la Información Personal suministrada por usted, incluyendo
+        registros de comportamiento y actividad en el Sitio, contactos a terceros que anuncien u ofrezcan productos o
+        servicios en el Sitio, parámetros de interés de búsquedas así como su historial de búsqueda y preferencias a
+        empresas del grupo Navent (para conocer las empresas del grupo Navent, ver:
+        http://www.navent.com/es/companies/), y a los anunciantes del Sitio Web, entidades financieras y compañías de
+        seguro de primera línea y reconocida trayectoria con la finalidad de proveerle ofertas, anuncios e información
+        que se ajusten en la mayor medida posible a sus expectativas y preferencias.</p>
+
+    <h5>7. PROTEGIENDO SU INFORMACIÓN PERSONAL</h5>
+
+    <p>7.1. Para prevenir acceso no autorizado, mantener la precisión de los datos y asegurar el uso correcto de su
+        Información Personal, NAVENT ha puesto en uso ciertos medios físicos, electrónicos, administrativos y
+        procedimientos de seguridad para resguardar y asegurar la Información Personal que recopilamos en línea.
+        Nosotros resguardamos la Información Personal de acuerdo a estándares y procedimientos de seguridad establecidos
+        y continuamente evaluamos nueva tecnología para proteger esa información. NAVENT garantiza que los procesos
+        internos propios de las bases de datos cumplen con las obligaciones legales de seguridad y confidencialidad
+        impuestas por las leyes de cada país en materia de privacidad y protección de datos personales.</p>
+
+    <p>7.2. A pesar de lo anterior, usted reconoce que los medios técnicos existentes que brindan seguridad no son
+        inexpugnables y que aun cuando se adopten todos los recaudos razonables de seguridad es posible sufrir
+        manipulaciones, destrucción y/o pérdida de información. De presentarse estos casos, NAVENT procederá conforme
+        las leyes de cada país en materia de privacidad y protección de datos lo requieran.</p>
+
+    <p>7.3. Los empleados de NAVENT son entrenados para comprender y cumplir con estos principios en materia de
+        protección de datos personales y seguridad de la información. Asimismo, los empleados de NAVENT asumen estrictos
+        compromisos de confidencialidad en cuanto a la Información Personal que procesan en el ejercicio de sus
+        funciones.</p>
+
+    <p>7.4. Usted consiente, reconoce y acepta que su información personal sea almacenada en la jurisdicción de NAVENT
+        o que la misma pueda ser transferida, almacenada y tratada fuera de su país de residencia.</p>
+
+    <h5>8. MENORES DE EDAD</h5>
+
+    <p>8.1. NAVENT no tiene intenciones de recopilar Información Personal de menores de edad. Cuando corresponda,
+        NAVENT le indicará específicamente a los menores que no brinden esa información Personal en nuestro Sitio Web
+        y/o tomará medidas razonables para obtener el consentimiento de los padres, tutor o representante legal para la
+        entrega de esa Información Personal.</p>
+
+    <p>8.2. Le informamos que en su condición de padre, tutor legal o representante será el responsable de que sus
+        hijos menores o bajo su tutela accedan al Sitio Web, por lo que recomendamos enfáticamente tomar las
+        precauciones oportunas durante la navegación en el Sitio Web. A este fin, le informamos que algunos navegadores
+        permiten configurarse para que los niños no puedan acceder a páginas determinadas.</p>
+
+    <h5>9. LINKS EXTERNOS</h5>
+
+    <p>El Sitio Web puede contener links hacia y provenientes de otros sitios de Internet. NAVENT no es responsable por
+        las prácticas de privacidad ni el tratamiento de los datos personales de esos sitios. DRICO recomienda que
+        consulten las prácticas de privacidad de dichos sitios de Internet antes de su utilización.</p>
+
+    <h5>10. DERECHOS DEL USUARIO</h5>
+
+    <p>10.1. Si usted ha proporcionado Información Personal a través de los servicios disponibles en el Sitio Web,
+        usted podrá acceder a la misma, revisar, modificar, eliminar y actualizar su Información Personal en el momento
+        que lo desee.</p>
+
+    <p>10.2. Si usted desea acceder a su Información Personal o si tal Información Personales es incorrecta,
+        desactualizada y/o suprimida, por favor tenga a bien enviar su solicitud por correo electrónico de acuerdo con
+        las normas implementadas en su país tal como se detalla en la cláusula
+        12 con el asunto “Informar”, “Rectificar”, “Suprimir” y/o “Actualizar” y/o cualquier otro según
+        corresponda, conjuntamente con el objeto de su requerimiento. Dicha solicitud deberá contener como mínimo la
+        siguiente información:</p>
+
+    <p>- nombre y domicilio, a efecto de dar respuesta a su solicitud en los plazos establecidos en la ley
+        aplicable;</p>
+
+    <p>- copia de su documento de identidad, pasaporte o cualquier otro documento que acredite su identidad o acredite
+        la personalidad de su representante legal, y en caso que la solicitud se realice a través del representante
+        legal, acompañar el documento que acredita sus facultades como representante;</p>
+
+    <p>- descripción clara y precisa de los datos personales sobre los que se busca ejercer alguno de los derechos antes
+        mencionados de acceso, rectificación, oposición, cancelación o revocación, así como la descripción clara y
+        precisa de su solicitud;</p>
+
+    <p>- fecha y firma del solicitante; y</p>
+
+    <p>- cualquier otro elemento o documento que facilite la localización de dichos datos personales.</p>
+
+    <p>10.3. Asimismo, si usted se suscribe a alguno de los servicios o comunicaciones que ofrece NAVENT podrá dar de
+        baja su suscripción en cualquier momento siguiendo las instrucciones incluidas en cada comunicación.</p>
+
+    <p>10.4. NAVENT cooperará con las autoridades de cada país cuando éstas requieran formalmente cualquier información
+        relacionada con nuestras bases de datos.</p>
+
+    <h5 id="getSection_12">11. CAMBIOS A ESTE AVISO DE PRIVACIDAD</h5>
+
+    <p>NAVENT se reserva el derecho a modificar esta Política de Privacidad periódicamente, en cuyo caso la política
+        actualizada se publicará en este mismo sitio, siendo obligación de los usuarios revisar regularmente esta
+        sección a fin de informarse de cualquier cambio que se pueda haber producido. De todos modos, NAVENT cursará una
+        comunicación a su cuenta de correo electrónico registrada a efectos de informarle sobre el cambio en la Política
+        de Privacidad.</p>
+
+    <h5>12. LOCALIZACIÓN</h5>
+
+    <p>12.1. PARA USUARIOS EN MÉXICO</p>
+
+    <p>12.1.1. NAVENT significa Bumeran.com Argentina S.A., con domicilio en Rondeau 2664, Piso 3, Ciudad Autónoma de
+        Buenos Aires. El Sitio Web es www.bumeran.com.ar. La presente Política de Privacidad se rige por la las leyes de
+        la República Argentina.</p>
+
+    <p>12.1.2. El derecho de acceso a los datos podrá ser ejercido en forma gratuita por el interesado en la medida que
+        la correspondiente información sea solicitada en intervalos no inferiores a seis meses, salvo que se acredite un
+        interés legítimo al efecto.</p>
+
+    <p>12.1.3. El contacto para ejercer los derechos de acceso, rectificación, actualización y supresión de la
+        Información Personal es: imaginario
+    </p>
+
+    <p>12.1.4. La Información Personal recabada a través del Sitio Web puede ser transferida para los fines
+        anteriormente descritos a nuestras filiales, entidades asociadas y proveedores de servicios, en otros países.
+        Dichos países pueden no tener la misma normativa de protección de datos que la que existe en Argentina. Cuando
+        transfiramos su Información Personal a otros países, la protegeremos en la forma descrita en este
+        documento.</p>
+
+    <p>12.1.5. De conformidad con la Ley 25.326 y la Disposición 11/06 de la Agencia de Acceso a la Información Pública
+        (ex Dirección Nacional de Protección de Datos Personales) hemos implementado salvaguardas que garantizan un
+        nivel adecuado de protección de la Información Personal que se transfiere fuera de sus fronteras.</p>
+
+    <p>12.1.6. Se hace saber que la Agencia de Acceso a la Información Pública, Órgano de Control de la Ley Nº 25.326,
+        tiene la atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento de las
+        normas sobre protección de datos personales.</p>
+
+    <h5>13. CONTACTO</h5>
+
+    <p>Si tiene preguntas sobre su privacidad cuando utilice el Sitio Web, por favor contáctenos a los siguientes
+        correos electrónicos: imaginario.
+    </p>
+
+    <p>Esta Política de Privacidad fue actualizada por última vez el 21 de febrero de 2018.</p>
+
+</div>
+
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5>EL FAROLITO</h5>
+                <p>Bolsa de trabajo</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <ul>
+                    <li><a href="./politica-de-privacidad.html">Términos y Condiciones</a></li>
+                    <li><a href="#!">Políticas de Privacidad</a></li>
+                    <li><a href="#!">Buscar candidatos</a></li>
+                    <li><a href="#!">Buscar empresas</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container grey-text">
+            <p class="left">Este sitio es para fines educativos</p>
+            <p class="right">© Copyright 1999-2019 El farolito</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./js/estilos/navbar.js"></script>
+<script src="./js/usuario/sesion.js"></script>
+</body>
+</html>

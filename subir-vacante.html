@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es" ng-app="user">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Subir nueva vacante</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <!--Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="./js/usuario/subir-vacante.js"></script>
+    <link rel="stylesheet" href="./css/subir-vacantes.css">
+</head>
+
+<body ng-controller="myCtrl">
+<div class="pimg2">
+    <div class="row center imagen">
+        <a href="./index.html"><img src="./images/elfarolito.png" class="responsive-img" width="100"></a>
+    </div>
+    <div class="ptext">
+        <span class="border">SUBIR VACANTE DE TRABAJO</span>
+        <p><span class="border">EL FAROLITO</span></p>
+    </div>
+</div>
+
+<div class="container">
+    <form>
+        <div class="row">
+            <div class="input-field col l6 s12">
+                <input id="project_name" type="text" class="validate" style="color: white;" ng-model="data.projectName"
+                       required>
+                <label for="project_name">Nombre del proyecto</label>
+                <span class="helper-text" data-error="Nombre de proyecto invalido"
+                      data-success="Nombre de proyecto valido"></span>
+            </div>
+            <div class="input-field col l6 s12">
+                <input id="category" type="text" class="validate" style="color: white;" ng-model="data.category"
+                       required>
+                <label for="category">Categoria</label>
+                <span class="helper-text" data-error="Categoria valida" data-success="Categoria Invalida"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col l6 s12">
+                <input id="charge" type="text" class="validate" style="color: white;" ng-model="data.charge" required>
+                <label for="charge">Cargo a postular</label>
+            </div>
+            <div class="input-field col l6 s12">
+                <input id="loc" type="text" class="validate" style="color: white;" ng-model="data.country" required>
+                <label for="loc">País del trabajo</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col l6 s12">
+                <input id="state" type="text" class="validate" style="color: white;" ng-model="data.state" required>
+                <label for="state">Estado del trabajo</label>
+            </div>
+            <div class="input-field col l6 s12">
+                <input id="salary" type="text" class="validate" style="color: white;" ng-model="data.salary" required>
+                <label for="salary">Salario</label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="input-field col l12 s12">
+                <input id="req" type="text" class="validate" style="color: white;" ng-model="data.requirements"
+                       required>
+                <label for="req">Requisitos del postulante</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col l12 s12">
+                <textarea id="description" class="materialize-textarea" style="color: white;"
+                          ng-model="data.description" required></textarea>
+                <label for="description">Descripción del trabajo a realizar</label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="input-field col l12 s12 center">
+               <p id="error-formulario">{{msg}}</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col l12 s12 center">
+                <button class="waves-effect waves-light btn-large" type="submit" value="SUBIR VACANTE"
+                        ng-click="subir()">SUBIR VACANTE
+                </button>
+            </div>
+    </form>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

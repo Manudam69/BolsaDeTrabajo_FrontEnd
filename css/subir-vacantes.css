@@ -1,0 +1,120 @@
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body,html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #ffffff;
+background: rgb(18, 18, 18);
+}
+
+.pimg2,
+.pimg3 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg2 {
+    background-image: url('../images/parallax1.jpg');
+    min-height: 400px;
+}
+.imagen{
+   padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.ptext {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext .border.trans {
+    background-color: transparent;
+}
+
+.ptext>p {
+    margin: 0;
+    margin-top: 39px;
+    color: white;
+    font-size: 15px;
+}
+.container{
+    margin-top: 50px;
+}
+
+.input-field input:focus + label {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* label underline focus color */
+
+.row .input-field input:focus {
+    border-bottom: 1px solid rgb(255, 255, 255) !important;
+    -webkit-box-shadow: 0 1px 0 0 rgb(255, 255, 255) !important;
+    box-shadow: 0 1px 0 0 rgb(16, 114, 239) !important;
+}
+.input-field textarea:focus + label {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* label underline focus color */
+
+.row .input-field textarea:focus {
+    border-bottom: 1px solid rgb(255, 255, 255) !important;
+    -webkit-box-shadow: 0 1px 0 0 rgb(255, 255, 255) !important;
+    box-shadow: 0 1px 0 0 rgb(16, 114, 239) !important;
+}
+input[type=submit]{
+    color: white;
+}
+.btn-large {
+    background-color: rgb(10, 3, 38);
+}
+
+.btn-large:hover {
+    background-color: rgb(9, 3, 34);
+}
+#error-formulario{
+    color: red;
+}
+.btn-large:focus {
+    background-color: rgb(9, 3, 34);
+}
+
+@media(max-width:568px) {
+    .logo{
+        display: none;
+    }
+    .pimg2,
+    .pimg3 {
+        background-attachment: scroll;
+    }
+    .ptext .border {
+        background-color: transparent;
+        color: #fff;
+        padding: 20px;
+    }
+
+    .ptext{
+      background-color: #111;
+        padding: 20px;
+    }
+}

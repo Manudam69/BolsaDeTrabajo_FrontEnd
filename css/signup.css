@@ -9,10 +9,19 @@ body {
     width: 100%;
     margin-top: auto;
     background-color: rgb(10, 3, 38);
+    color: white;
 }
 .btn-large:hover {
     background-color: rgb(9, 3, 34);
+    color: white;
 }
+.btn-large:focus {
+    background-color: rgb(9, 3, 34);
+}
+input[type=submit]{
+    color: white;
+}
+
 
 .elementos {
     width: 500px;
@@ -34,6 +43,19 @@ body {
 .input-field .prefix.active {
     color: rgb(255, 255, 255);
 }
+
+/* valid color */
+.input-field input.valid {
+    border-bottom: 1px solid #00ff1d;
+    box-shadow: 0 1px 0 0 #00ff1d;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid red;
+    box-shadow: 0 1px 0 0 red;
+}
+
+
 
 a{
     color: #00ff1d;

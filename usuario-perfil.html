@@ -43,7 +43,8 @@
                         class="material-icons right">business</i></a></li>
                 <li id="sesion-web" class="iniciar-sesion" ng-show="iniciar"><a href="./login.html">Iniciar sesión<i
                         class="material-icons right">account_circle</i></a></li>
-                <li class="perfil" ng-show="cerrar"><a class="dropdown-trigger" href="#!" data-target='perfil'>Mi perfil<i class="material-icons right">account_circle</i></a></li>
+                <li class="perfil" ng-show="cerrar"><a class="dropdown-trigger" href="#!" data-target='perfil'>Mi perfil<i
+                        class="material-icons right">account_circle</i></a></li>
             </ul>
         </div>
     </nav>
@@ -121,13 +122,36 @@
     <hr>
 </div>
 
+
+<div class="container" ng-show="subirVacante">
+    <div class="row espacio">
+        <h4 class="center">No tienes una vacante todavía</h4>
+        <hr>
+    </div>
+
+    <div>
+        <div class="row">
+            <div class="col l8 s12 center">
+                <p class="h mt-0">Que esperas sube tu vacante ahora!</p>
+                <p class="mt-0">Presiona el botón para subir tu vacante y empezar a recibir solicitudes de empleados</p>
+            </div>
+            <div class="col l4 s12">
+                <a class="waves-effect waves-light btn-large" id="BCurriculum" href="./subir-vacante.html"><i
+                        class="material-icons right">assignment</i>SUBE TU VACANTE</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
 <div class="container">
     <div class="row center espacio">
-        <h5>Información de cuenta</h5>
+        <h5>Información de la cuenta</h5>
     </div>
     <div class="row container center">
         <div class="col l12 s12">Nombre <br>
-            <p class="nombre"></p>{{name}}</div>
+            <p class="nombre"></p>{{name}}
+        </div>
     </div>
     <div class="row container center">
         <div class="col l6 s12">Correo electrónico <br>
@@ -156,16 +180,19 @@
     </div>
 
     <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Eliminacion de cuenta</h4>
-      <p>¿Estas completamente seguro de eliminar tu cuenta? <br>
-        Al eliminar tu cuenta toda tu información se perdera de nuestro sistema.
-      </p>
+        <div class="modal-content">
+            <h4>Eliminacion de cuenta</h4>
+            <p>¿Estas completamente seguro de eliminar tu cuenta? <br>
+                Al eliminar tu cuenta toda tu información se perdera de nuestro sistema.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-close waves-effect waves-green btn-flat" ng-click="eliminarUsuariob()"
+               ng-show="eliminarUsuario">Confirmar</a>
+            <a class="modal-close waves-effect waves-green btn-flat" ng-click="eliminarEmpresab()"
+               ng-show="eliminarEmpresa">Confirmar</a>
+        </div>
     </div>
-    <div class="modal-footer">
-      <a class="modal-close waves-effect waves-green btn-flat" ng-click="eliminar()">Confirmar</a>
-    </div>
-  </div>
 </div>
 
 <footer class="page-footer">

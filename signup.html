@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de el farolito</title>
     <link rel="icon" type="image/png" href="./images/favicon.png">
@@ -19,36 +20,37 @@
 </head>
 
 <body class="valign-wrapper" ng-app="user">
-    <div class="container elementos" ng-controller="myCtrl">
-        <div class="row center">
-            <a href="./index.html"><img src="./images/elfarolito.png" class="responsive-img" width="100"></a>
-        </div>
+<div class="container elementos" ng-controller="myCtrl">
+    <div class="row center">
+        <a href="./index.html"><img src="./images/elfarolito.png" class="responsive-img" width="100"></a>
+    </div>
+    <div class="row center">
+        <h4>CREAR CUENTA</h4>
+    </div>
+    <form>
         <div class="row">
-            <div class=""></div>
-        </div>
-        <div class="row center">
-            <h4>CREAR CUENTA</h4>
-        </div>
 
-        <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">account_box</i>
-                <input id="name" type="text" style="color: white;" ng-model="data.name">
+                <input id="name" type="text" style="color: white;" ng-model="data.name" class="validate" minlength="8">
                 <label for="name">Nombres</label>
+                <span class="helper-text" data-error="Nombre completo" data-success="Nombre correcto"></span>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>
-                <input id="email" type="text" style="color: white;" ng-model="data.email">
+                <input id="email" type="email" style="color: white;" ng-model="data.email" class="validate">
                 <label for="email">Correo electrónico</label>
+                <span class="helper-text" data-error="Correo electrónico invalido" data-success="Correo electrónico valido"></span>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">lock</i>
-                <input id="contraseña" type="password" style="color: white;" ng-model="data.password">
+                <input id="contraseña" type="password" style="color: white;" ng-model="data.password" class="validate" minlength="5">
                 <label for="contraseña">Contraseña</label>
+                <span class="helper-text" data-error="Contraseña invalida" data-success="Contraseña valida"></span>
             </div>
         </div>
         <div class="row">
@@ -58,18 +60,19 @@
         </div>
         <div class="row">
             <div class="col s12">
-                <a class="waves-effect waves-light btn-large" id="newUser" ng-click="submit()">CREAR CUENTA</a>
+                <button class="waves-effect waves-light btn-large" type="submit" value="CREAR CUENTA" id="newUser" ng-click="submit()">REGISTRARME</button>
             </div>
         </div>
-        <div class="row center">
-            <p>¿Ya tienes cuenta de El farolito? <a href="./signup.html">Iniciar sesión</a></p>
-            <p>¿Tienes una empresa? <a href="./signup-company.html">Crear tu cuenta</a></p>
-        </div>
-        <hr>
+    </form>
+    <div class="row center">
+        <p>¿Ya tienes cuenta de El farolito? <a href="./login.html">Iniciar sesión</a></p>
+        <p>¿Tienes una empresa? <a href="./signup-company.html">Crear tu cuenta</a></p>
     </div>
+    <hr>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./js/usuario/registro.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./js/usuario/registro.js"></script>
 </body>
 
 </html>

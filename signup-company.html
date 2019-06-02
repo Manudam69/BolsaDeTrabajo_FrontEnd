@@ -2,93 +2,102 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Registro de empresa</title>
-  <link rel="icon" type="image/png" href="./images/favicon.png">
-  <!--Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <!-- AngularJS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-  <link rel="stylesheet" href="./css/signup-company.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de empresa</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <!--Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <link rel="stylesheet" href="./css/signup-company.css">
 </head>
 
 <body ng-app="company">
-  <div class="container elementos" ng-controller="myCtrl">
+<div class="container elementos" ng-controller="myCtrl">
     <div class="row center">
-      <a href="./index.html"><img src="./images/elfarolito.png" class="responsive-img" width="100"></a>
+        <a href="./index.html"><img src="./images/elfarolito.png" class="responsive-img" width="100"></a>
     </div>
     <div class="row">
-      <div class=""></div>
+        <div class=""></div>
     </div>
     <div class="row center">
-      <h4>REGISTRAR EMPRESA</h4>
+        <h4>REGISTRAR EMPRESA</h4>
     </div>
+    <form>
+        <div class="row">
+            <div class="input-field col l6 s12">
+                <i class="material-icons prefix">account_box</i>
+                <input id="name" type="text" style="color: white;" ng-model="data.name" class="validate" minlength="8">
+                <label for="name">Nombres</label>
+            </div>
+            <div class="input-field col l6 s12">
+                <i class="material-icons prefix">business</i>
+                <input id="company-name" type="text" style="color: white;" ng-model="data.companyName" class="validate">
+                <label for="company-name">Nombre de la empresa</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col l6 s12">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" style="color: white;" ng-model="data.email" class="validate">
+                <label for="email">Correo electrónico</label>
+            </div>
+            <div class="input-field col l6 s12">
+                <i class="material-icons prefix">lock</i>
+                <input id="contraseña" type="password" style="color: white;" ng-model="data.password" class="validate" minlength="5">
+                <label for="contraseña">Contraseña</label>
+                <span class="helper-text" data-error="Contraseña invalida" data-success="Contraseña valida"></span>
+            </div>
+        </div>
 
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">account_box</i>
-        <input id="name" type="text" style="color: white;" ng-model="data.name">
-        <label for="name">Nombres</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">business</i>
-        <input id="company-name" type="text" style="color: white;" ng-model="data.companyName">
-        <label for="company-name">Nombre de la empresa</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">email</i>
-        <input id="email" type="email" style="color: white;" ng-model="data.email">
-        <label for="email">Correo electrónico</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">verified_user</i>
-        <input id="rfc" type="text" style="color: white;" ng-model="data.rfc">
-        <label for="rfc">RFC de la empresa</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">phone</i>
-        <input id="telephone" type="tel" style="color: white;" ng-model="data.telephone">
-        <label for="telephone">Telefono</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <i class="material-icons prefix">spellcheck</i>
-        <input id="sat" type="text" style="color: white;" ng-model="data.sat">
-        <label for="sat">Razón Social registrada ante el SAT</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s12 center m-0">
-        <p id="error-formulario">{{msg}}</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s12">
-        <a class="waves-effect waves-light btn-large" id="newCompany" ng-click="submit()">registrar empresa</a>
-      </div>
-    </div>
+        <div class="row">
+            <div class="input-field col l6 s12">
+                <i class="material-icons prefix">phone</i>
+                <input id="telephone" type="tel" style="color: white;" ng-model="data.telephone" class="validate" pattern="[0-9]{7,20}">
+                <label for="telephone">Telefono</label>
+            </div>
+            <div class="row">
+                <div class="input-field col l6 s12">
+                    <i class="material-icons prefix">verified_user</i>
+                    <input id="rfc" type="text" style="color: white;" ng-model="data.rfc" class="validate" minlength="12"
+                           maxlength="13">
+                    <label for="rfc">RFC de la empresa</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col l12 s12">
+                <i class="material-icons prefix">spellcheck</i>
+                <input id="sat" type="text" style="color: white;" ng-model="data.sat" class="validate">
+                <label for="sat">Razón Social registrada ante el SAT</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 center m-0">
+                <p id="error-formulario">{{msg}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+               <button class="waves-effect waves-light btn-large" type="submit" value="REGISTRAR EMPRESA" id="newCompany" ng-click="submit()">REGISTRAR EMPRESA</button>
+            </div>
+        </div>
+    </form>
     <div class="row center">
-      <p>Para iniciar sesión como empresa es necesesario el correo electrónico y la contraseña proporcionada por nosotros.</p>
+        <p>Para iniciar sesión como empresa es necesesario el correo electrónico y la contraseña proporcionada por
+            nosotros.</p>
     </div>
     <hr>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./js/usuario/registro.js"></script>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./js/usuario/registro.js"></script>
 </body>
 
 </html>

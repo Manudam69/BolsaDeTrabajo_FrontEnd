@@ -24,7 +24,6 @@ app.controller('myCtrl', function ($scope, $http, $window) {
         }
     });
 
-
     $scope.loginCompany = function () {
         $http({
             url: '/login-company',
@@ -33,8 +32,10 @@ app.controller('myCtrl', function ($scope, $http, $window) {
         }).then(function successCallback(httpResponse) {
             $window.location.href = '/'
         }, function errorCallback(response) {
-            console.log("fallo", response.data.msg);
+            console.log("fallo", response);
             $scope.ms = response.data.msg;
         });
     };
+
+
 });

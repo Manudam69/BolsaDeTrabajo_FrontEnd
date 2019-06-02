@@ -15,7 +15,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             if(response.data.err.code === 11000)
                 $scope.msg = "Correo electrónico ya registrado";
             else
-            $scope.msg= "Por favor llena todos los campos";
+            $scope.msg= "Por favor llena todos los campos correctamente";
         });
     };
     $http({
@@ -48,7 +48,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             if(response.status === 400)
                 $scope.msg = "Correo electrónico ya registrado";
             if(response.status === 500) {
-                $scope.msg = "Completa los campos faltantes";
+                $scope.msg = "Completa los campos faltantes correctamente";
                 if(response.data.err.code === 11000)
                     $scope.msg = "Correo electrónico o empresa ya registrados";
             }

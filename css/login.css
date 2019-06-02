@@ -13,6 +13,9 @@ body {
 .btn-large:hover {
     background-color: rgb(9, 3, 34);
 }
+.btn-large:focus {
+    background-color: rgb(9, 3, 34);
+}
 .elementos {
     width: 380px;
 }
@@ -46,6 +49,10 @@ div>a {
 .espacio {
     height: 40vh;
 }
+input[type=submit]{
+    color: white;
+}
+
 .collection-item {
     color: white !important;
     background-color: rgb(9, 3, 34) !important;
