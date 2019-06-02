@@ -98,7 +98,7 @@
     </div>
 
     <div>
-        <div class="row container">
+        <div class="row container" ng-show="subirCurriculum">
             <div class="col l8 s12">
                 <p class="h mt-0">Te ayudamos a encontrar un trabajo mejor </p>
                 <p class="mt-0">Haz que tu currículum sea visible para miles de empresas en nuestra bolsa de trabajo</p>
@@ -108,6 +108,37 @@
                 <a class="waves-effect waves-light btn-large" href="./curriculum.html"><i class="material-icons right">assignment</i>SUBE
                 TU CURRÍCULUM</a>
 
+            </div>
+        </div>
+        <div class="row container" ng-show="curriculum">
+            <div class="col l8 s12">
+                <p class="h mt-0">Te ayudamos a encontrar un trabajo mejor </p>
+                <p class="mt-0">¿Que esperas ahora? Presiona el boton para empezar a buscar trabajo.</p>
+            </div>
+
+            <div class="col l4 s12">
+                <a class="waves-effect waves-light btn-large" href="./#!"><i class="material-icons right">assignment</i>VACANTES DE EMPRESAS</a>
+
+            </div>
+        </div>
+        <div class="row container" ng-show="subirVacante">
+            <div class="col l8 s12">
+                <p class="h mt-0">Te ayudamos a encontrar personal para tu empresa </p>
+                <p class="mt-0">Sube vacantes de trabajo para empezar a recibir curriculums de empleados.</p>
+            </div>
+
+            <div class="col l4 s12">
+                <a class="waves-effect waves-light btn-large" href="./subir-vacante.html"><i class="material-icons right">assignment</i>SUBIR VACANTES DE TRABAJO</a>
+            </div>
+        </div>
+        <div class="row container" ng-show="verVacante">
+            <div class="col l8 s12">
+                <p class="h mt-0">Te ayudamos a encontrar personal para tu empresa </p>
+                <p class="mt-0">Sube vacantes de trabajo para empezar a recibir curriculums de empleados.</p>
+            </div>
+
+            <div class="col l4 s12">
+                <a class="waves-effect waves-light btn-large" href="./subir-vacante.html"><i class="material-icons right">assignment</i>SUBIR VACANTES DE TRABAJO</a>
             </div>
         </div>
     </div>

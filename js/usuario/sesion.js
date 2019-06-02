@@ -56,8 +56,6 @@ app.controller('myCtrl', function ($scope, $http, $window) {
                 url: '/job',
                 method: 'GET',
             }).then(function successCallback(httpResponse) {
-                $scope.curriculum = false;
-                $scope.subirCurriculum = true;
                 if (httpResponse.data.ok) {
                     $scope.subirVacante = false;
                     $scope.verVacante = true;
@@ -100,7 +98,6 @@ app.controller('myCtrl', function ($scope, $http, $window) {
 
 
     $scope.eliminarEmpresab = function () {
-        console.log("gola")
         $http({
             url: '/delete-company',
             method: 'GET',

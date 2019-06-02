@@ -38,6 +38,7 @@
     <form>
         <div class="row">
             <div class="input-field col l6 s12">
+                <i class="material-icons prefix">chrome_reader_mode</i>
                 <input id="project_name" type="text" class="validate" style="color: white;" ng-model="data.projectName"
                        required>
                 <label for="project_name">Nombre del proyecto</label>
@@ -45,6 +46,7 @@
                       data-success="Nombre de proyecto valido"></span>
             </div>
             <div class="input-field col l6 s12">
+                <i class="material-icons prefix">clear_all</i>
                 <input id="category" type="text" class="validate" style="color: white;" ng-model="data.category"
                        required>
                 <label for="category">Categoria</label>
@@ -53,20 +55,24 @@
         </div>
         <div class="row">
             <div class="input-field col l6 s12">
+                <i class="material-icons prefix">person</i>
                 <input id="charge" type="text" class="validate" style="color: white;" ng-model="data.charge" required>
                 <label for="charge">Cargo a postular</label>
             </div>
             <div class="input-field col l6 s12">
+                <i class="material-icons prefix">place</i>
                 <input id="loc" type="text" class="validate" style="color: white;" ng-model="data.country" required>
                 <label for="loc">País del trabajo</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col l6 s12">
+                <i class="material-icons prefix">pin_drop</i>
                 <input id="state" type="text" class="validate" style="color: white;" ng-model="data.state" required>
                 <label for="state">Estado del trabajo</label>
             </div>
             <div class="input-field col l6 s12">
+                <i class="material-icons prefix">sentiment_neutral</i>
                 <input id="salary" type="text" class="validate" style="color: white;" ng-model="data.salary" required>
                 <label for="salary">Salario</label>
             </div>
@@ -74,6 +80,7 @@
         </div>
         <div class="row">
             <div class="input-field col l12 s12">
+                <i class="material-icons prefix">local_library</i>
                 <input id="req" type="text" class="validate" style="color: white;" ng-model="data.requirements"
                        required>
                 <label for="req">Requisitos del postulante</label>
@@ -81,6 +88,7 @@
         </div>
         <div class="row">
             <div class="input-field col l12 s12">
+                <i class="material-icons prefix">work</i>
                 <textarea id="description" class="materialize-textarea" style="color: white;"
                           ng-model="data.description" required></textarea>
                 <label for="description">Descripción del trabajo a realizar</label>
@@ -89,16 +97,17 @@
         </div>
         <div class="row">
             <div class="input-field col l12 s12 center">
-               <p id="error-formulario">{{msg}}</p>
+                <p id="error-formulario">{{msg}}</p>
             </div>
 
         </div>
-        <div class="row">
+        <div class="row" style="margin-bottom: 150px;">
             <div class="col l12 s12 center">
                 <button class="waves-effect waves-light btn-large" type="submit" value="SUBIR VACANTE"
                         ng-click="subir()">SUBIR VACANTE
                 </button>
             </div>
+        </div>
     </form>
 
 </div>
