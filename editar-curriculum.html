@@ -17,6 +17,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="./css/curriculum.css">
+    <script type="text/javascript">
+
+    </script>
 </head>
 <body ng-app="user">
 <div class="row" style="margin:0; padding:0;">
@@ -31,41 +34,39 @@
         <div class="row">
             <div class="input-field col l6 s12">
                 <i class="material-icons prefix">location_city</i>
-                <input  id="direccion-curriculum" type="text" style="color: white;" ng-model="data.address">
-                <label for="direccion-curriculum">{{dir}}</label>
+                <input placeholder="Avenida siempre viva 101" id="direccion-curriculum" type="text" style="color: white;" ng-model="data.address">
+                <label class="active" for="direccion-curriculum">Dirección</label>
             </div>
             <div class="input-field col l6 s12">
                 <i class="material-icons prefix">phone_android</i>
-                <input id="telefono-curriculum" type="text" style="color: white;" ng-model="data.telephone">
-                <label for="telefono-curriculum">{{tel}}</label>
+                <input placeholder="Telefono" id="telefono-curriculum" type="text" style="color: white;" ng-model="data.telephone">
+                <label for="telefono-curriculum">Telefono</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col l6 s12" style="color: black">
                 <i class="material-icons prefix" style="color: white">face</i>
-                <input id="nacimiento-curriculum" type="text" class="datepicker" ng-model="data.birthDate"
-                       style="color: white">
-                <label for="nacimiento-curriculum" style="color: white">{{nac}}</label>
+                <input placeholder="15/05/1897" id="nacimiento-curriculum" type="text" class="datepicker" ng-model="data.birthDate" style="color: white">
+                <label for="nacimiento-curriculum" style="color: white">Fecha de nacimiento</label>
             </div>
             <div class="input-field col l6 s12">
                 <i class="material-icons prefix">location_on</i>
-                <input id="pais-curriculum" type="text" style="color: white;" ng-model="data.country">
-                <label for="pais-curriculum">{{pais}}</label>
+                <input placeholder="Estados Unidos" id="pais-curriculum" type="text" style="color: white;" ng-model="data.country">
+                <label for="pais-curriculum">Pais</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col l12 s12">
                 <i class="material-icons prefix">school</i>
-                <input id="titulo-curriculum" type="text" style="color: white;" ng-model="data.profession">
-                <label for="titulo-curriculum">{{pro}}</label>
+                <input placeholder="Licenciado en Matematicas" id="titulo-curriculum" type="text" style="color: white;" ng-model="data.profession">
+                <label for="titulo-curriculum">Titulo</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col l12 s12">
                 <i class="material-icons prefix">work</i>
-                <textarea id="experience" class="materialize-textarea" style="color: white;"
-                          ng-model="data.experience"></textarea>
-                <label for="experience">Habla un poco sobre tus habilidades</label>
+                <textarea placeholder="Habla un poco sobre tus habilidades" id="experience" class="materialize-textarea" style="color: white;"ng-model="data.experience"></textarea>
+                <label for="experience">experiencia</label>
             </div>
         </div>
         <div class="row">

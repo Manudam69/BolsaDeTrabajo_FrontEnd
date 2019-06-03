@@ -9,12 +9,12 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             $window.location.href = '/curriculum.html';
         else {
             console.log(response.data.curriculum.address);
-            $scope.dir = response.data.curriculum.address;
-            $scope.tel = response.data.curriculum.telephone;
-            $scope.nac = response.data.curriculum.birthDate;
-            $scope.pais = response.data.curriculum.country;
-            $scope.pro = response.data.curriculum.profession;
-            $scope.exp = response.data.curriculum.experience;
+            $scope.data.address = response.data.curriculum.address;
+            $scope.data.telephone = response.data.curriculum.telephone;
+            $scope.data.birthDate = response.data.curriculum.birthDate;
+            $scope.data.country = response.data.curriculum.country;
+            $scope.data.profession = response.data.curriculum.profession;
+            $scope.data.experience = response.data.curriculum.experience;
         }
     });
 
