@@ -57,8 +57,10 @@ app.controller('myCtrl', function ($scope, $http, $window) {
                 method: 'GET',
             }).then(function successCallback(httpResponse) {
                 if (httpResponse.data.ok) {
+                    //console.log();
                     $scope.subirVacante = false;
                     $scope.verVacante = true;
+                    $scope.vacantes = httpResponse.data.job;
                 }
             }, function errorCallback(response) {
                 console.log("fallo", response);

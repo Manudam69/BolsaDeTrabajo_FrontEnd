@@ -25,36 +25,37 @@
           <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="42" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="34" />
-          <entry key="html" value="55" />
-          <entry key="js" value="52" />
+          <entry key="css" value="39" />
+          <entry key="html" value="60" />
+          <entry key="js" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="34" />
-          <entry key="HTML" value="55" />
-          <entry key="JavaScript" value="49" />
+          <entry key="CSS" value="39" />
+          <entry key="HTML" value="60" />
+          <entry key="JavaScript" value="52" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="569" />
-          <entry key="html" value="4926" />
-          <entry key="js" value="3720" />
+          <entry key="css" value="644" />
+          <entry key="html" value="5338" />
+          <entry key="js" value="3846" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="569" />
-          <entry key="HTML" value="4926" />
-          <entry key="JavaScript" value="3720" />
+          <entry key="CSS" value="644" />
+          <entry key="HTML" value="5338" />
+          <entry key="JavaScript" value="3846" />
         </counts>
       </usages-collector>
     </session>
@@ -62,67 +63,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/usuario-perfil.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-738">
-              <caret line="63" column="61" lean-forward="true" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="61" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/js/usuario/vacantes,js.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="133" column="47" selection-start-line="133" selection-start-column="47" selection-end-line="133" selection-end-column="47" />
+            <state relative-caret-position="306">
+              <caret line="18" column="96" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="18" selection-end-column="96" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/subir-vacante.html">
+        <entry file="file://$PROJECT_DIR$/vacantes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-              <folding>
-                <element signature="n#style#0;n#div#6;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.html">
+        <entry file="file://$PROJECT_DIR$/css/vacantes.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="37" column="71" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="130" column="22" selection-start-line="130" selection-start-column="22" selection-end-line="130" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/login.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="39" selection-start-line="39" selection-end-line="41" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/subir-vacantes.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+            <state relative-caret-position="85">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -130,8 +97,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/usuario/sesion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-333">
-              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+            <state relative-caret-position="408">
+              <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -141,9 +117,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -190,11 +166,16 @@
         <option value="$PROJECT_DIR$/css/signup.css" />
         <option value="$PROJECT_DIR$/css/signup-company.css" />
         <option value="$PROJECT_DIR$/signup.html" />
-        <option value="$PROJECT_DIR$/js/usuario/sesion.js" />
         <option value="$PROJECT_DIR$/usuario-perfil.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/subir-vacantes.css" />
         <option value="$PROJECT_DIR$/subir-vacante.html" />
+        <option value="$PROJECT_DIR$/js/usuario/sesion.js" />
+        <option value="$PROJECT_DIR$/css/mis-vacantes.css" />
+        <option value="$PROJECT_DIR$/js/usuario/vacantes,js.js" />
+        <option value="$PROJECT_DIR$/mis-vacantes.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/vacantes.css" />
+        <option value="$PROJECT_DIR$/vacantes.html" />
       </list>
     </option>
   </component>
@@ -231,12 +212,6 @@
               <item name="BolsaDeTrabajo_FrontEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="BolsaDeTrabajo_FrontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BolsaDeTrabajo_FrontEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BolsaDeTrabajo_FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="usuario" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,16 +291,18 @@
       <workItem from="1559484496377" duration="1739000" />
       <workItem from="1559499034530" duration="993000" />
       <workItem from="1559509591824" duration="2021000" />
+      <workItem from="1559587440355" duration="7975000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99559000" />
+    <option name="totallyTimeSpent" value="107534000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21428572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21641791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -458,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/usuario/subir-vacante.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/editar-curriculum.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408">
@@ -514,31 +484,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/usuario/sesion.js">
+    <entry file="file://$PROJECT_DIR$/usuario-perfil.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-333">
-          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="133" column="47" selection-start-line="133" selection-start-column="47" selection-end-line="133" selection-end-column="47" />
+        <state relative-caret-position="1071">
+          <caret line="63" column="61" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
-          <caret line="37" column="71" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="130" column="22" selection-start-line="130" selection-start-column="22" selection-end-line="130" selection-end-column="22" />
+          <caret line="36" column="71" lean-forward="true" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -549,6 +505,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/subir-vacante.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+          <folding>
+            <element signature="n#style#0;n#div#6;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/usuario/subir-vacante.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/subir-vacantes.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -556,20 +529,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usuario-perfil.html">
+    <entry file="file://$PROJECT_DIR$/js/usuario/sesion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-738">
-          <caret line="63" column="61" lean-forward="true" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="61" />
+        <state relative-caret-position="408">
+          <caret line="62" column="60" selection-start-line="62" selection-start-column="60" selection-end-line="62" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/subir-vacante.html">
+    <entry file="file://$PROJECT_DIR$/css/mis-vacantes.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#div#6;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="738">
+          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/usuario/vacantes,js.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mis-vacantes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/vacantes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="96" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="18" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vacantes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
         </state>
       </provider>
     </entry>
