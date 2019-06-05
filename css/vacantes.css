@@ -5,3 +5,14 @@ body{
     background: rgb(18, 18, 18);
     color: white;
 }
+
+.collection-item {
+    color: white !important;
+    background-color: rgb(9, 3, 34) !important;
+}
+
+a {
+    color: #00ff1d;
+    font-size: 20px;
+    text-transform: uppercase;
+}

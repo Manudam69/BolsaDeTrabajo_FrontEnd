@@ -1,0 +1,16 @@
+<div class="container">
+  <ul class="collection" ng-repeat="vacante in vacantes">
+    <li class="collection-item avatar">
+      <img src="./images/empresas.jpg" alt="" class="circle">
+      <span class="title">
+        <a href="#!vacantes/{{vacante._id}}">
+          <p>{{vacante.charge}}</p>
+        </a>
+        <p>{{vacante.companyName}}</p>
+      </span>
+      <p>{{vacante.state}},{{vacante.country}}</p>
+      <p>{{vacante.salary}}</p>
+      {{vacante.category}}
+    </li>
+  </ul>
+</div>
