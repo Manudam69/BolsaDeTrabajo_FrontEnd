@@ -16,3 +16,22 @@ a {
     font-size: 20px;
     text-transform: uppercase;
 }
+
+.perfil{
+    margin-top: 50px;
+}
+p{
+    font-size: 20px;
+}
+
+.btn-large {
+    background-color: rgb(10, 3, 38);
+}
+
+.btn-large:hover {
+    background-color: rgb(9, 3, 34);
+}
+
+.btn-large:focus {
+    background-color: rgb(9, 3, 34);
+}

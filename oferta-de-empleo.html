@@ -1,29 +1,37 @@
-<!doctype html>
-<html lang="es" ng-app="user">
+<div class="container perfil">
+    <div class="row">
+        <div class="col l2 s6">
+            <img src="./images/empresas.jpg" class="responsive-img" width="150">
+        </div>
+        <div class="col l10 s6">
+            <h5 class="left">{{vacantes.companyName}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            <b> {{vacantes.charge}}</b>
+        </p>
+    </div>
+    <div class="row">
+        <p>
+            <i class="tiny material-icons">location_on</i>
+            {{vacantes.state}},{{vacantes.country}}
+        </p>
+        <p>
+            ${{vacantes.salary}}
+        </p>
+        <p>
+            Categoría: {{vacantes.category}}
+        </p>
+    </div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Perfiles de empresas</title>
-  <link rel="icon" type="image/png" href="./images/favicon.png">
-  <!--Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <!-- AngularJS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
-</head>
+    <div class="row center">
+        <p>Descripcion de la vacante: <br>
+            {{vacantes.description}}</p>
+        <p>Requisitos: <br>
+            {{vacantes.requirements}}</p>
+    </div>
 
-<body ng-controller="myCtrl">
-  <div class="container">
-    holabb
-    {{message}}
-  </div>
-</body>
+    <a class="waves-effect waves-light btn-large">Postularme</a>
+</div>
 
-</html>

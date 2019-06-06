@@ -2,18 +2,18 @@ var app = angular.module('user', ['ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider.
   when('/', {
-    templateUrl: 'vacantes-de-trabajo.html',
+    templateUrl: './vacantes-de-trabajo.html',
     controller: 'myCtrl'
   }).
-  when('/vacantes/:personId',{ //Aca se le agrega :personId para que despues se pueda tomar desde el routeParams
+  when('/vacantes/:personId',{
     templateUrl: 'oferta-de-empleo.html',
     controller: 'Ctrl2'
   });
 });
 
-app.controller('myCtrl', function($scope, $location,$http) {
+app.controller('myCtrl', function($scope,$location,$http) {
   $http({
-      url: '/job',
+      url: '/jobs',
       method: 'GET',
   }).then(function successCallback(httpResponse) {
       if (httpResponse.data.ok) {
@@ -23,10 +23,23 @@ app.controller('myCtrl', function($scope, $location,$http) {
       console.log("fallo", response);
   });
   $scope.goTo2 = function(person) {
-    console.log('heyyyyyyy');
-     $location.url('/vacantes/' + person.id); //el $location identifica person como una variable
+     $location.url('/vacantes/' + person.id);
   };
 });
-app.controller('Ctrl2', function($scope, $routeParams) {
-   $scope.message = 'PersonId = ' + $routeParams.personId; //routeParams tomando el valor...
+
+app.controller('Ctrl2', function($scope, $routeParams,$http) {
+    $http({
+        url: '/req-job',
+        method: 'POST',
+        data: {
+            id: $routeParams.personId
+        }
+    }).then(function successCallback(httpResponse) {
+        if (httpResponse.data.ok) {
+           console.log(httpResponse.data);
+           $scope.vacantes = httpResponse.data.job;
+        }
+    }, function errorCallback(response) {
+        console.log("fallo", response);
+    });
 });
