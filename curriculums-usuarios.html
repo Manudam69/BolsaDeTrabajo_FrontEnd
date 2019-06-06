@@ -1,0 +1,16 @@
+<div class="container">
+  <ul class="collection" ng-repeat="curriculum in cur">
+    <li class="collection-item avatar">
+      <img src="./images/empresas.jpg" alt="" class="circle">
+      <span class="title">
+        <a href="#!curriculums/{{curriculum._id}}">
+          <p>{{curriculum.name}}</p>
+        </a>
+        <p>{{curriculum.addres}}</p>
+      </span>
+      <p>{{curriculum.country}}</p>
+      <p>{{curriculum.profession}}</p>
+      {{curriculum.name}}
+    </li>
+  </ul>
+</div>

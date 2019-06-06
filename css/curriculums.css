@@ -1,0 +1,14 @@
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background: rgb(18, 18, 18);
+    color: white;
+}
+
+
+.collection-item {
+    color: white !important;
+    background-color: rgb(9, 3, 34) !important;
+}
