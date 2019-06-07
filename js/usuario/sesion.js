@@ -27,7 +27,27 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             }).then(function successCallback(httpResponse) {
                 $scope.curriculum = false;
                 $scope.subirCurriculum = true;
+                $scope.mostrarCurriculum = true;
+                $scope.ocultarCurriculum = false;
                 if (httpResponse.data.ok) {
+                  $scope.mostrarC = function (){
+                    $http({
+                        url: '/curriculum-visible',
+                        method: 'GET',
+                    }).then(function successCallback(httpResponse) {
+                        if (httpResponse.data.ok) {
+                          console.log("funcionaq");
+                          location.reload(); 
+                        }
+                    }, function errorCallback(response) {
+                        console.log("fallo", response);
+                    });
+
+                  }
+                    if(httpResponse.data.curriculum.visible){
+                      $scope.mostrarCurriculum = false;
+                      $scope.ocultarCurriculum = true;
+                    }
                     $scope.curriculum = true;
                     $scope.subirCurriculum = false;
                     $scope.direccion = httpResponse.data.curriculum.address;
@@ -51,7 +71,6 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             $scope.email = httpResponse.data.user.email;
             $scope.iniciar = false;
             $scope.cerrar = true;
-
             $http({
                 url: '/job',
                 method: 'GET',
