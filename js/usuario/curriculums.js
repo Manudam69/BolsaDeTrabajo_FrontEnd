@@ -5,7 +5,7 @@ app.config(function($routeProvider) {
     templateUrl: './curriculums-usuarios.html',
     controller: 'myCtrl'
   }).
-  when('/curriculum/:personId', {
+  when('/curriculums/:personId', {
     templateUrl: 'perfil-usuario.html',
     controller: 'Ctrl2'
   });
@@ -38,11 +38,10 @@ app.controller('Ctrl2', function($scope, $routeParams, $http) {
       }
   }).then(function successCallback(httpResponse) {
       if (httpResponse.data.ok) {
-         console.log(httpResponse.data);
-         $scope.vacantes = httpResponse.data.curriculum;
+         console.log(httpResponse.data.curriculum);
+         $scope.curriculum = httpResponse.data.curriculum;
       }
   }, function errorCallback(response) {
       console.log("fallo", response);
   });
-  console.log('Pag 2');
 });

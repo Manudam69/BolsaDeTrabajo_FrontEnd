@@ -51,7 +51,8 @@
             </div>
             <div class="input-field col l6 s12">
                 <i class="material-icons prefix">lock</i>
-                <input id="contraseña" type="password" style="color: white;" ng-model="data.password" class="validate" minlength="5">
+                <input id="contraseña" type="password" style="color: white;" ng-model="data.password" class="validate"
+                       minlength="5">
                 <label for="contraseña">Contraseña</label>
                 <span class="helper-text" data-error="Contraseña invalida" data-success="Contraseña valida"></span>
             </div>
@@ -60,13 +61,15 @@
         <div class="row">
             <div class="input-field col l6 s12">
                 <i class="material-icons prefix">phone</i>
-                <input id="telephone" type="tel" style="color: white;" ng-model="data.telephone" class="validate" pattern="[0-9]{7,20}">
+                <input id="telephone" type="tel" style="color: white;" ng-model="data.telephone" class="validate"
+                       pattern="[0-9]{7,20}">
                 <label for="telephone">Telefono</label>
             </div>
             <div class="row">
                 <div class="input-field col l6 s12">
                     <i class="material-icons prefix">verified_user</i>
-                    <input id="rfc" type="text" style="color: white;" ng-model="data.rfc" class="validate" minlength="12"
+                    <input id="rfc" type="text" style="color: white;" ng-model="data.rfc" class="validate"
+                           minlength="12"
                            maxlength="13">
                     <label for="rfc">RFC de la empresa</label>
                 </div>
@@ -86,7 +89,9 @@
         </div>
         <div class="row">
             <div class="col s12">
-               <button class="waves-effect waves-light btn-large" type="submit" value="REGISTRAR EMPRESA" id="newCompany" ng-click="submit()">REGISTRAR EMPRESA</button>
+                <button class="waves-effect waves-light btn-large" type="submit" value="REGISTRAR EMPRESA"
+                        id="newCompany" ng-click="submit()">REGISTRAR EMPRESA
+                </button>
             </div>
         </div>
     </form>

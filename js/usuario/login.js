@@ -22,6 +22,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
         if (httpResponse.data.ok) {
             $window.location.href = '/'
         }
+    }, function errorCallback(response) {
     });
 
     $scope.loginCompany = function () {

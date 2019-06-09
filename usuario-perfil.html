@@ -99,10 +99,12 @@
         </div>
     </div>
     <div class="row">
-      <div class="col l12 center">
-        <a class="waves-effect waves-light btn-large" ng-show="mostrarCurriculum" ng-click="mostrarC()"><i class="material-icons right">visibility</i>Mostrar curriculum</a>
-        <a class="waves-effect waves-light btn-large" ng-show="ocultarCurriculum" ng-click="mostrarC()"><i class="material-icons right">visibility_off</i>Ocultar curriculum</a>
-      </div>
+        <div class="col l12 center">
+            <a class="waves-effect waves-light btn-large" ng-show="mostrarCurriculum" ng-click="mostrarC()"><i
+                    class="material-icons right">visibility</i>Mostrar curriculum</a>
+            <a class="waves-effect waves-light btn-large" ng-show="ocultarCurriculum" ng-click="mostrarC()"><i
+                    class="material-icons right">visibility_off</i>Ocultar curriculum</a>
+        </div>
 
     </div>
     <hr>
@@ -164,7 +166,7 @@
                 <p class="mt-0">Presiona el botón para ver todas tus vacantes</p>
             </div>
             <div class="col l4 s12">
-                <a class="waves-effect waves-light btn-large" href="./subir-vacante.html"><i
+                <a class="waves-effect waves-light btn-large" href="./mis-vacantes.html"><i
                         class="material-icons right">assignment</i>VER MIS VACANTES</a>
             </div>
         </div>
@@ -196,8 +198,19 @@
     <div class="row container center">
         <div class="col l12 s12">
             <p>Modificar contraseña</p>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">lock</i>
+                <input id="contraseña" type="password" style="color: white;" ng-model="data.password">
+                <label for="contraseña">Contraseña anterior</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">lock</i>
+                <input id="contraseña2" type="password" style="color: white;" ng-model="data.password2">
+                <label for="contraseña2">Contraseña nueva</label>
+            </div>
+            {{msg}} <br> <br>
+            <a class="waves-effect waves-light btn-large" ng-click="modificar()">Modificar contraseña</a>
         </div>
-
     </div>
     <div class="row container center">
         <div class="col l12 s12">

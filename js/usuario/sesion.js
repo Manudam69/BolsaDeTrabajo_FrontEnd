@@ -8,7 +8,6 @@ app.controller('myCtrl', function ($scope, $http, $window) {
     }).then(function successCallback(httpResponse) {
         $scope.name = "El farolito";
         $scope.email = "Bolsa de trabajo";
-        console.log(httpResponse.data);
         if (httpResponse.data.ok && httpResponse.data.user.type == "user") {
             //información en el perfil del usuario
             $scope.name = httpResponse.data.user.name;
@@ -61,6 +60,19 @@ app.controller('myCtrl', function ($scope, $http, $window) {
                 console.log("fallo", response);
             });
         }
+
+        $scope.modificar = function(){
+            $http({
+                url: '/modify-password',
+                method: 'POST',
+                data: $scope.data
+            }).then(function successCallback(httpResponse) {
+                location.reload();
+            }, function errorCallback(response) {
+                console.log("fallo", response);
+                $scope.msg = response.data.msg;
+            });
+        };
 
         if (httpResponse.data.ok && httpResponse.data.user.type == "company") {
             $scope.eliminarUsuario = false;
