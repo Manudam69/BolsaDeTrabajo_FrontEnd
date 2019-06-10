@@ -37,7 +37,7 @@ app.controller('Ctrl2', function ($scope, $routeParams, $http, $window) {
         $scope.vacantes = httpResponse.data.job;
         var trabajo = httpResponse.data.job;
         $http({
-            url: '/is-log',
+            url: '/curriculum',
             method: 'GET',
         }).then(function successCallback(Response) {
             $scope.apply = function () {
@@ -47,7 +47,7 @@ app.controller('Ctrl2', function ($scope, $routeParams, $http, $window) {
                     data: {
                         email: trabajo.email,
                         projectName: trabajo.projectName,
-                        link: "http://localhost:8000/curriculums.html#!/curriculums/" + Response.data.user._id
+                        link: "http://localhost:8000/curriculums.html#!/curriculums/" + Response.data.curriculum._id
                     }
                 }).then(function successCallback(res) {
                     console.log(res);

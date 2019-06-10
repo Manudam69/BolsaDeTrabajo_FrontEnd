@@ -7,8 +7,24 @@ body {
     color: white;
 }
 
+.perfil{
+    margin-top: 50px;
+}
 
 .collection-item {
     color: white !important;
     background-color: rgb(9, 3, 34) !important;
+}
+
+
+.btn-large {
+    background-color: rgb(10, 3, 38);
+}
+
+.btn-large:hover {
+    background-color: rgb(9, 3, 34);
+}
+
+.btn-large:focus {
+    background-color: rgb(9, 3, 34);
 }
