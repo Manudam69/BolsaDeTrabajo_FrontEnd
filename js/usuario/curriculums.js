@@ -35,11 +35,19 @@ app.controller('Ctrl2', function ($scope, $routeParams, $http) {
             id: $routeParams.personId
         }
     }).then(function successCallback(httpResponse) {
-        if (httpResponse.data.ok) {
-            console.log(httpResponse.data.curriculum);
-            $scope.curriculum = httpResponse.data.curriculum;
-        }
+        //console.log(httpResponse.data.curriculum);
+        $scope.curriculum = httpResponse.data.curriculum;
     }, function errorCallback(response) {
         console.log("fallo", response);
     });
+    $http({
+        url: '/is-log',
+        method: 'GET',
+    }).then(function successCallback(httpResponse) {
+        if (httpResponse.data.user.type == "company") {
+            $scope.postulante = true;
+        }
+    }, function errorCallback(response) {
+    });
+
 });

@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Iniciar sesión</title>
+    <title>Mis vacantes</title>
     <link rel="icon" type="image/png" href="./images/favicon.png">
     <!--Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -21,7 +21,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <link rel="stylesheet" href="./css/mis-vacantes.css">
 </head>
-
 <body ng-controller="myCtrl">
 <header>
     <ul id="perfil" class="dropdown-content">
@@ -31,11 +30,13 @@
     </ul>
     <nav>
         <div class="nav-wrapper">
-            <a href="./index.html" class="logo"><img src="./images/elfarolito.png" class="responsive-img" width="60"></a>
+            <a href="./index.html" class="logo"><img src="./images/elfarolito.png" class="responsive-img"
+                                                     width="60"></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down elementos">
                 <li><a href="sass.html">Perfiles laborales<i class="material-icons right">contacts</i></a></li>
-                <li><a href="./vacantes.html">Perfiles de empresas<i class="material-icons right">business_center</i></a>
+                <li><a href="./vacantes.html">Perfiles de empresas<i
+                        class="material-icons right">business_center</i></a>
                 </li>
                 <li class="registrar-empresa"><a href="./signup-company.html" ng-show="iniciar">Registrar mi empresa<i
                         class="material-icons right">business</i></a></li>
@@ -71,26 +72,131 @@
     </ul>
 </header>
 
-<div class="container">
-    <h4 class="center titulo">MIS VACANTES</h4>
-    <ul class="collection" ng-repeat="vacante in vacantes">
-        <li class="collection-item avatar">
-            <img src="./images/empresas.jpg" alt="" class="circle">
-            <span class="title">Nombre de la empresa: {{vacante.companyName}}</span>
-            <p>Nombre del proyecto: {{vacante.projectName}} <br>
-                Categoria: {{vacante.category}}
-            </p>
-            <p>Cargo: {{vacante.charge}}</p>
-            <p>Lugar: {{vacante.state}},{{vacante.country}}</p>
-            <p>Salario: {{vacante.salary}}</p>
-            <p>Requisitos del postulante: {{vacante.requirements}}</p>
-            <p>Detalles del proyecto: {{vacante.description}}</p>
-        </li>
-    </ul>
+
+<ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+    <li class="tab"><a href="#tab1" class="white-text">MIS VACANTES</a></li>
+    <li class="tab"><a href="#tab2" class="white-text">EDITAR/ELIMINAR MIS VACANTES</a></li>
+</ul>
+<div id="tab1" class="col s12">
+    <div class="container">
+        <h4 class="center titulo">MIS VACANTES</h4>
+        <ul class="collection" ng-repeat="vacante in vacantes">
+            <li class="collection-item avatar">
+                <img src="./images/empresas.jpg" alt="" class="circle">
+                <span class="title">Nombre de la empresa: {{vacante.companyName}}</span>
+                <p>Nombre del proyecto: {{vacante.projectName}} <br>
+                    Categoria: {{vacante.category}}
+                </p>
+                <p>Cargo: {{vacante.charge}}</p>
+                <p>Lugar: {{vacante.state}},{{vacante.country}}</p>
+                <p>Salario: {{vacante.salary}}</p>
+                <p>Requisitos del postulante: {{vacante.requirements}}</p>
+                <p>Detalles del proyecto: {{vacante.description}}</p>
+            </li>
+        </ul>
+    </div>
 </div>
+<div id="tab2" class="col s12">
+    <div class="container">
+        <h4 class="center titulo">EDITAR MIS VACANTES</h4>
+        <p class="center">Llena solamente los campos a modificar, los vacios quedaran igual</p>
+        <form>
+            <div class="input-field col l12 s12">
+                <select class="browser-default" ng-model="data.projectName"
+                        ng-options="item as item.projectName for item in items">
+                    <option value="" disabled selected>Nombre del proyecto a modificar</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="input-field col l6 s12">
+                    <i class="material-icons prefix">chrome_reader_mode</i>
+                    <input id="project_name" type="text" class="validate" style="color: white;" ng-model="data.newprojectName">
+                    <label for="project_name">Nombre del proyecto</label>
+                    <span class="helper-text" data-error="Nombre de proyecto invalido"
+                          data-success="Nombre de proyecto valido"></span>
+                </div>
+                <div class="input-field col l6 s12">
+                    <i class="material-icons prefix">clear_all</i>
+                    <input id="category" type="text" class="validate" style="color: white;" ng-model="data.category">
+                    <label for="category">Categoria</label>
+                    <span class="helper-text" data-error="Categoria Invalida" data-success="Categoria valida"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col l6 s12">
+                    <i class="material-icons prefix">person</i>
+                    <input id="charge" type="text" class="validate" style="color: white;" ng-model="data.charge">
+                    <label for="charge">Cargo a postular</label>
+                </div>
+                <div class="input-field col l6 s12">
+                    <i class="material-icons prefix">place</i>
+                    <input id="loc" type="text" class="validate" style="color: white;" ng-model="data.country" >
+                    <label for="loc">País del trabajo</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col l6 s12">
+                    <i class="material-icons prefix">pin_drop</i>
+                    <input id="state" type="text" class="validate" style="color: white;" ng-model="data.state" >
+                    <label for="state">Estado del trabajo</label>
+                </div>
+                <div class="input-field col l6 s12">
+                    <i class="material-icons prefix">sentiment_neutral</i>
+                    <input id="salary" type="text" class="validate" style="color: white;" ng-model="data.salary">
+                    <label for="salary">Salario</label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="input-field col l12 s12">
+                    <i class="material-icons prefix">local_library</i>
+                    <input id="req" type="text" class="validate" style="color: white;" ng-model="data.requirements">
+                    <label for="req">Requisitos del postulante</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col l12 s12">
+                    <i class="material-icons prefix">work</i>
+                    <textarea id="description" class="materialize-textarea" style="color: white;"
+                              ng-model="data.description"></textarea>
+                    <label for="description">Descripción del trabajo a realizar</label>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="input-field col l12 s12 center">
+                    <p id="error-formulario">{{msg}}</p>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 150px;">
+                <div class="col l12 s12 center">
+                    <button class="waves-effect waves-light btn-large" type="submit" ng-click="modificarVacante()">EDITAR VACANTE
+                    </button>
+                </div>
+
+            </div>
+        </form>
+        <h4 class="center titulo">ELIMINAR MIS VACANTES</h4>
+        <div class="row">
+            <div class="input-field col l12 s12">
+                <select class="browser-default" ng-model="job.project"
+                        ng-options="item as item.projectName for item in items">
+                        <option value="" disabled selected>Nombre del proyecto a eliminar</option>
+                </select>
+            </div>
+            <div class="input-field col l12 s12 center">
+                <a class="waves-effect waves-light btn-large eliminar" ng-click="eliminarVacante()">Eliminar vacante</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./js/estilos/navbar.js"></script>
 <script src="./js/usuario/sesion.js"></script>
+<script src="./js/estilos/tabs.js"></script>
 </body>
 
 </html>

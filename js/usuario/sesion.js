@@ -29,23 +29,23 @@ app.controller('myCtrl', function ($scope, $http, $window) {
                 $scope.mostrarCurriculum = true;
                 $scope.ocultarCurriculum = false;
                 if (httpResponse.data.ok) {
-                  $scope.mostrarC = function (){
-                    $http({
-                        url: '/curriculum-visible',
-                        method: 'GET',
-                    }).then(function successCallback(httpResponse) {
-                        if (httpResponse.data.ok) {
-                          console.log("funcionaq");
-                          location.reload(); 
-                        }
-                    }, function errorCallback(response) {
-                        console.log("fallo", response);
-                    });
+                    $scope.mostrarC = function () {
+                        $http({
+                            url: '/curriculum-visible',
+                            method: 'GET',
+                        }).then(function successCallback(httpResponse) {
+                            if (httpResponse.data.ok) {
+                                console.log("funcionaq");
+                                location.reload();
+                            }
+                        }, function errorCallback(response) {
+                            console.log("fallo", response);
+                        });
 
-                  }
-                    if(httpResponse.data.curriculum.visible){
-                      $scope.mostrarCurriculum = false;
-                      $scope.ocultarCurriculum = true;
+                    };
+                    if (httpResponse.data.curriculum.visible) {
+                        $scope.mostrarCurriculum = false;
+                        $scope.ocultarCurriculum = true;
                     }
                     $scope.curriculum = true;
                     $scope.subirCurriculum = false;
@@ -61,7 +61,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             });
         }
 
-        $scope.modificar = function(){
+        $scope.modificar = function () {
             $http({
                 url: '/modify-password',
                 method: 'POST',
@@ -88,13 +88,37 @@ app.controller('myCtrl', function ($scope, $http, $window) {
                 method: 'GET',
             }).then(function successCallback(httpResponse) {
                 if (httpResponse.data.ok) {
-                    //console.log();
                     $scope.subirVacante = false;
                     $scope.verVacante = true;
                     $scope.vacantes = httpResponse.data.job;
+                    $scope.items = httpResponse.data.job;
+                    $scope.modificarVacante = function (){
+                        $http({
+                            url: '/modify-job',
+                            method: 'POST',
+                            data: $scope.data
+                        }).then(function successCallback(respuesta) {
+                            location.reload();
+                        }, function errorCallback(response) {
+                            console.log("fallo", response);
+                            $scope.msg = response.data.msg;
+                        });
+                    };
+                    $scope.eliminarVacante = function () {
+                        $http({
+                            url: '/delete-job',
+                            method: 'POST',
+                            data: $scope.job
+                        }).then(function successCallback(respuesta) {
+                            location.reload();
+                        }, function errorCallback(response) {
+                            console.log("fallo", response);
+                            $scope.msg = response.data.msg;
+                        });
+                    };
                 }
             }, function errorCallback(response) {
-                console.log("fallo", response);
+                //console.log("fallo", response);
             });
         }
 

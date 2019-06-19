@@ -50,19 +50,19 @@ app.controller('Ctrl2', function ($scope, $routeParams, $http, $window) {
                         link: "http://localhost:8000/curriculums.html#!/curriculums/" + Response.data.curriculum._id
                     }
                 }).then(function successCallback(res) {
-                    console.log(res);
+                    //console.log(res);
                     alert("Correo de postulacion enviado");
-                    $window.location.href = '/index.html'
+                    $window.location.href = '/';
                 }, function errorCallback(response) {
                     console.log("fallo", response);
-                    $window.location.href = '/login.html'
+                    $window.location.href = '/login.html';
                 });
             };
         }, function errorCallback(response) {
             $scope.apply = function () {
-                $window.location.href = '/login.html'
+                $window.location.href = '/login.html';
             };
-           // console.log("fallo", response);
+            // console.log("fallo", response);
         });
 
         $scope.goTo2 = function (person) {

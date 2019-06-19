@@ -24,19 +24,4 @@ app.controller('myCtrl', function ($scope, $http, $window) {
         }
     }, function errorCallback(response) {
     });
-
-    $scope.loginCompany = function () {
-        $http({
-            url: '/login-company',
-            method: 'POST',
-            data: $scope.data
-        }).then(function successCallback(httpResponse) {
-            $window.location.href = '/'
-        }, function errorCallback(response) {
-            console.log("fallo", response);
-            $scope.ms = response.data.msg;
-        });
-    };
-
-
 });

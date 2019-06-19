@@ -12,10 +12,10 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             $window.location.href = '/login.html'
         }, function errorCallback(response) {
             console.log("fallo", response.data.err.code);
-            if(response.data.err.code === 11000)
+            if (response.data.err.code === 11000)
                 $scope.msg = "Correo electrónico ya registrado";
             else
-            $scope.msg= "Por favor llena todos los campos correctamente";
+                $scope.msg = "Por favor llena todos los campos correctamente";
         });
     };
     $http({
@@ -45,11 +45,11 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             $window.location.href = '/login.html'
         }, function errorCallback(response) {
             console.log("fallo", response);
-            if(response.status === 400)
+            if (response.status === 400)
                 $scope.msg = "Correo electrónico ya registrado";
-            if(response.status === 500) {
+            if (response.status === 500) {
                 $scope.msg = "Completa los campos faltantes correctamente";
-                if(response.data.err.code === 11000)
+                if (response.data.err.code === 11000)
                     $scope.msg = "Correo electrónico o empresa ya registrados";
             }
 
