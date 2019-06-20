@@ -2,8 +2,6 @@ var settings = {
     "url": "/is-log"
 }
 
-$.get(settings).done(function (response) {
-    if (!response.ok) {
-        $(location).attr('href',"/login.html");
-    }
+$.get(settings).fail(function (response) {
+    $(location).attr('href',"/login.html");
 });
