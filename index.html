@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inicio</title>
     <link rel="icon" type="image/png" href="./images/favicon.png">
@@ -14,7 +15,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <!-- JQuery para el autocomplete -->
@@ -23,165 +25,172 @@
 </head>
 
 <body ng-controller="myCtrl">
-    <header>
-        <ul id="perfil" class="dropdown-content">
-            <li><a href="./usuario-perfil.html"><i class="material-icons right">settings</i>Configuración de Perfil</a></li>
-            <li class="cerrar-sesion" ng-click="cerrarSesion()"><a href="#!"><i class="fas fa-sign-out-alt right"></i>Cerrar
+<header>
+    <ul id="perfil" class="dropdown-content">
+        <li><a href="./usuario-perfil.html"><i class="material-icons right">settings</i>Configuración de Perfil</a></li>
+        <li class="cerrar-sesion" ng-click="cerrarSesion()"><a href="#!"><i class="fas fa-sign-out-alt right"></i>Cerrar
             Sesión</a></li>
-        </ul>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="./index.html" class="logo"><img src="./images/elfarolito.png" class="responsive-img" width="60"></a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down elementos">
-                    <li><a href="./curriculums.html">Perfiles laborales<i class="material-icons right">contacts</i></a></li>
-                    <li><a href="./vacantes.html">Perfiles de empresas<i class="material-icons right">business_center</i></a>
-                    </li>
-                    <li class="registrar-empresa"><a href="./signup-company.html" ng-show="iniciar">Registrar mi empresa<i
+    </ul>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="./index.html" class="logo"><img src="./images/elfarolito.png" class="responsive-img"
+                                                     width="60"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down elementos">
+                <li><a href="#!">Videollamada<i class="material-icons right">videocam</i></a></li>
+                <li><a href="./curriculums.html">Perfiles laborales<i class="material-icons right">contacts</i></a></li>
+                <li><a href="./vacantes.html">Perfiles de empresas<i
+                        class="material-icons right">business_center</i></a>
+                </li>
+                <li class="registrar-empresa"><a href="./signup-company.html" ng-show="iniciar">Registrar mi empresa<i
                         class="material-icons right">business</i></a></li>
-                    <li id="sesion-web" class="iniciar-sesion" ng-show="iniciar"><a href="./login.html">Iniciar sesión<i
+                <li id="sesion-web" class="iniciar-sesion" ng-show="iniciar"><a href="./login.html">Iniciar sesión<i
                         class="material-icons right">account_circle</i></a></li>
-                    <li class="perfil" ng-show="cerrar"><a class="dropdown-trigger" href="#!" data-target='perfil'>Mi perfil<i
+                <li class="perfil" ng-show="cerrar"><a class="dropdown-trigger" href="#!" data-target='perfil'>Mi perfil<i
                         class="material-icons right">account_circle</i></a></li>
-                </ul>
-            </div>
-        </nav>
-        <ul class="sidenav" id="mobile-demo">
-            <li>
-                <div class="user-view">
-                    <div class="background">
-                        <img src="./images/fondo-navbar.jpg" alt="imagen de perfil">
-                    </div>
-                    <a href="#" class="center-align"><img src="../images/elfarolito.png" class="circle"></a>
-                    <a class="mt-0"><span class=" name white-text">{{name}} </span> </a>
-                    <a class="mt-0"><span class="id white-text"> {{email}}</span></a>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="./images/fondo-navbar.jpg" alt="imagen de perfil">
                 </div>
-            </li>
+                <a href="#" class="center-align"><img src="../images/elfarolito.png" class="circle"></a>
+                <a class="mt-0"><span class=" name white-text">{{name}} </span> </a>
+                <a class="mt-0"><span class="id white-text"> {{email}}</span></a>
+            </div>
+        </li>
 
-            <li><a href="sass.html"><i class="material-icons">contacts</i>Perfiles laborales</a></li>
-            <li><a href="badges.html"><i class="material-icons">business_center</i>Perfiles de empresas</a></li>
-            <li class="registrar-empresa" ng-show="iniciar"><a href="./signup-company.html"><i class="material-icons">business</i>Registrar
+        <li><a href="sass.html"><i class="material-icons">contacts</i>Perfiles laborales</a></li>
+        <li><a href="badges.html"><i class="material-icons">business_center</i>Perfiles de empresas</a></li>
+        <li class="registrar-empresa" ng-show="iniciar"><a href="./signup-company.html"><i class="material-icons">business</i>Registrar
             mi empresa</a></li>
-            <li class="perfil" ng-show="cerrar"><a href="./usuario-perfil.html"><i class="material-icons">settings</i>Configuración
+        <li><a href="#!">Videollamada<i class="material-icons">videocam</i></a></li>
+        <li class="perfil" ng-show="cerrar"><a href="./usuario-perfil.html"><i class="material-icons">settings</i>Configuración
             de Perfil</a></li>
-            <li id="sesion-cel" class="iniciar-sesion" ng-show="iniciar"><a href="./login.html"><i class="material-icons">account_circle</i>Iniciar
+        <li id="sesion-cel" class="iniciar-sesion" ng-show="iniciar"><a href="./login.html"><i class="material-icons">account_circle</i>Iniciar
             sesión</a></li>
-            <li class="cerrar-sesion perfil" ng-show="cerrar" ng-click="cerrarSesion()"><a href="#!"><i
+        <li class="cerrar-sesion perfil" ng-show="cerrar" ng-click="cerrarSesion()"><a href="#!"><i
                 class="material-icons">account_circle</i>Cerrar sesión</a></li>
-        </ul>
-    </header>
-    <div class="pimg2">
-        <div class="ptext">
-            <span class="border">EL FAROLITO</span>
-            <p><span class="border">Bolsa de trabajo</span></p>
+    </ul>
+</header>
+<div class="pimg2">
+    <div class="ptext">
+        <span class="border">EL FAROLITO</span>
+        <p><span class="border">Bolsa de trabajo</span></p>
+    </div>
+</div>
+<div class="row container busqueda">
+    <hr>
+    <div class="col l5 s12" id="pais-buscar">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">location_on</i>
+            <input type="text" id="pais-input" class="autocomplete" style="color: white;">
+            <label for="pais-input">País</label>
         </div>
     </div>
-    <div class="row container busqueda">
-        <hr>
-        <div class="col l5 s12" id="pais-buscar">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">location_on</i>
-                <input type="text" id="pais-input" class="autocomplete" style="color: white;">
-                <label for="pais-input">País</label>
-            </div>
-        </div>
-        <div class="col l5 s12" id="titulo-buscar">
-            <div class="input-field col s12">
-                <i class="material-icons prefix">work</i>
-                <input type="text" id="titulo-input" class="autocomplete" style="color: white;">
-                <label for="titulo-input">Titulo o Empresa</label>
-            </div>
-        </div>
-        <div class="col l2 s12 boton">
-            <a class="waves-effect waves-light btn-large">BUSCAR <i class="material-icons right">search</i></a>
+    <div class="col l5 s12" id="titulo-buscar">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">work</i>
+            <input type="text" id="titulo-input" class="autocomplete" style="color: white;">
+            <label for="titulo-input">Titulo o Empresa</label>
         </div>
     </div>
+    <div class="col l2 s12 boton">
+        <a class="waves-effect waves-light btn-large">BUSCAR <i class="material-icons right">search</i></a>
+    </div>
+</div>
 
-    <div>
-        <div class="row container" ng-show="subirCurriculum">
-            <div class="col l8 s12">
-                <p class="h mt-0">Te ayudamos a encontrar un trabajo mejor </p>
-                <p class="mt-0">Haz que tu currículum sea visible para miles de empresas en nuestra bolsa de trabajo</p>
-            </div>
+<div>
+    <div class="row container" ng-show="subirCurriculum">
+        <div class="col l8 s12">
+            <p class="h mt-0">Te ayudamos a encontrar un trabajo mejor </p>
+            <p class="mt-0">Haz que tu currículum sea visible para miles de empresas en nuestra bolsa de trabajo</p>
+        </div>
 
-            <div class="col l4 s12">
-                <a class="waves-effect waves-light btn-large" href="./curriculum.html"><i class="material-icons right">assignment</i>SUBE
+        <div class="col l4 s12">
+            <a class="waves-effect waves-light btn-large" href="./curriculum.html"><i class="material-icons right">assignment</i>SUBE
                 TU CURRÍCULUM</a>
 
-            </div>
         </div>
-        <div class="row container" ng-show="curriculum">
-            <div class="col l8 s12">
-                <p class="h mt-0">Te ayudamos a encontrar un trabajo mejor </p>
-                <p class="mt-0">¿Que esperas ahora? Presiona el boton para empezar a buscar trabajo.</p>
-            </div>
-
-            <div class="col l4 s12">
-                <a class="waves-effect waves-light btn-large" href="vacantes.html"><i class="material-icons right">assignment</i>VACANTES DE EMPRESAS</a>
-
-            </div>
+    </div>
+    <div class="row container" ng-show="curriculum">
+        <div class="col l8 s12">
+            <p class="h mt-0">Te ayudamos a encontrar un trabajo mejor </p>
+            <p class="mt-0">¿Que esperas ahora? Presiona el boton para empezar a buscar trabajo.</p>
         </div>
-        <div class="row container" ng-show="subirVacante">
-            <div class="col l8 s12">
-                <p class="h mt-0">Te ayudamos a encontrar personal para tu empresa </p>
-                <p class="mt-0">Sube vacantes de trabajo para empezar a recibir curriculums de empleados.</p>
-            </div>
 
-            <div class="col l4 s12">
-                <a class="waves-effect waves-light btn-large" href="./subir-vacante.html"><i class="material-icons right">assignment</i>SUBIR VACANTES DE TRABAJO</a>
-            </div>
+        <div class="col l4 s12">
+            <a class="waves-effect waves-light btn-large" href="vacantes.html"><i class="material-icons right">assignment</i>VACANTES
+                DE EMPRESAS</a>
+
         </div>
-        <div class="row container" ng-show="verVacante">
-            <div class="col l8 s12">
-                <p class="h mt-0">Te ayudamos a encontrar personal para tu empresa </p>
-                <p class="mt-0">Sube vacantes de trabajo para empezar a recibir curriculums de empleados.</p>
-            </div>
+    </div>
+    <div class="row container" ng-show="subirVacante">
+        <div class="col l8 s12">
+            <p class="h mt-0">Te ayudamos a encontrar personal para tu empresa </p>
+            <p class="mt-0">Sube vacantes de trabajo para empezar a recibir curriculums de empleados.</p>
+        </div>
 
-            <div class="col l4 s12">
-                <a class="waves-effect waves-light btn-large" href="./subir-vacante.html"><i class="material-icons right">assignment</i>SUBIR VACANTES DE TRABAJO</a>
+        <div class="col l4 s12">
+            <a class="waves-effect waves-light btn-large" href="./subir-vacante.html"><i class="material-icons right">assignment</i>SUBIR
+                VACANTES DE TRABAJO</a>
+        </div>
+    </div>
+    <div class="row container" ng-show="verVacante">
+        <div class="col l8 s12">
+            <p class="h mt-0">Te ayudamos a encontrar personal para tu empresa </p>
+            <p class="mt-0">Sube vacantes de trabajo para empezar a recibir curriculums de empleados.</p>
+        </div>
+
+        <div class="col l4 s12">
+            <a class="waves-effect waves-light btn-large" href="./subir-vacante.html"><i class="material-icons right">assignment</i>SUBIR
+                VACANTES DE TRABAJO</a>
+        </div>
+    </div>
+</div>
+<div class="container espacio">
+    <hr>
+</div>
+
+
+<div class="pimg3">
+    <div class="ptext">
+        <span class="border">Busca empleo ahora</span>
+        <p><span class="border">EN EMPRESAS DE TODO EL MUNDO</span></p>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5>EL FAROLITO</h5>
+                <p>Bolsa de trabajo</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <ul>
+                    <li><a href="./terminos-y-condiciones.html">Términos y Condiciones</a></li>
+                    <li><a href="./politica-de-privacidad.html">Políticas de Privacidad</a></li>
+                    <li><a href="#!">Buscar candidatos</a></li>
+                    <li><a href="#!">Buscar empresas</a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="container espacio">
-        <hr>
-    </div>
-
-
-    <div class="pimg3">
-        <div class="ptext">
-            <span class="border">Busca empleo ahora</span>
-            <p><span class="border">EN EMPRESAS DE TODO EL MUNDO</span></p>
+    <div class="footer-copyright">
+        <div class="container grey-text">
+            <p class="left">Este sitio es para fines educativos</p>
+            <p class="right">© Copyright 1999-2019 El farolito</p>
         </div>
     </div>
-
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5>EL FAROLITO</h5>
-                    <p>Bolsa de trabajo</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <ul>
-                        <li><a href="./terminos-y-condiciones.html">Términos y Condiciones</a></li>
-                        <li><a href="./politica-de-privacidad.html">Políticas de Privacidad</a></li>
-                        <li><a href="#!">Buscar candidatos</a></li>
-                        <li><a href="#!">Buscar empresas</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container grey-text">
-                <p class="left">Este sitio es para fines educativos</p>
-                <p class="right">© Copyright 1999-2019 El farolito</p>
-            </div>
-        </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./js/estilos/navbar.js"></script>
-    <script src="./js/estilos/autocomplete.js"></script>
-    <script src="./js/usuario/sesion.js"></script>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./js/estilos/navbar.js"></script>
+<script src="./js/estilos/autocomplete.js"></script>
+<script src="./js/usuario/sesion.js"></script>
 </body>
 
 </html>
