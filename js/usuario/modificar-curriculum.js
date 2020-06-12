@@ -12,7 +12,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             $scope.data.address = response.data.curriculum.address;
             $scope.data.telephone = response.data.curriculum.telephone;
             $scope.data.birthDate = response.data.curriculum.birthDate;
-            $scope.data.country = response.data.curriculum.country;
+            $scope.data.state = response.data.curriculum.state;
             $scope.data.profession = response.data.curriculum.profession;
             $scope.data.experience = response.data.curriculum.experience;
         }

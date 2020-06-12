@@ -41,18 +41,9 @@ app.controller('myCtrl', function ($scope, $http, $window) {
             method: 'POST',
             data: $scope.data
         }).then(function successCallback(httpResponse) {
-            console.log('response:', httpResponse);
             $window.location.href = '/login.html'
         }, function errorCallback(response) {
-            console.log("fallo", response);
-            if (response.status === 400)
-                $scope.msg = "Correo electrónico ya registrado";
-            if (response.status === 500) {
-                $scope.msg = "Completa los campos faltantes correctamente";
-                if (response.data.err.code === 11000)
-                    $scope.msg = "Correo electrónico o empresa ya registrados";
-            }
-
+            $scope.msg = "Lo sentimos, existe algun error";
         });
     }
 });

@@ -54,7 +54,7 @@ app.controller('myCtrl', function ($scope, $http, $window) {
                     $scope.telefono = httpResponse.data.curriculum.telephone;
                     $scope.experiencia = httpResponse.data.curriculum.experience;
                     $scope.profesion = httpResponse.data.curriculum.profession;
-                    $scope.pais = httpResponse.data.curriculum.country;
+                    $scope.state = httpResponse.data.curriculum.state;
                 }
             }, function errorCallback(response) {
                 console.log("fallo", response);
