@@ -36,8 +36,9 @@
                                                      width="60"></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down elementos">
-                <li><a href="sass.html">Perfiles laborales<i class="material-icons right">contacts</i></a></li>
-                <li><a href="badges.html">Perfiles de empresas<i class="material-icons right">business_center</i></a>
+                <li><a href="./curriculums.html">Perfiles laborales<i class="material-icons right">contacts</i></a></li>
+                <li><a href="./vacantes.html">Perfiles de empresas<i
+                        class="material-icons right">business_center</i></a>
                 </li>
                 <li class="registrar-empresa"><a href="./signup-company.html" ng-show="iniciar">Registrar mi empresa<i
                         class="material-icons right">business</i></a></li>
@@ -49,16 +50,27 @@
         </div>
     </nav>
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html"><i class="material-icons">contacts</i>Perfiles laborales</a></li>
-        <li><a href="badges.html"><i class="material-icons">business_center</i>Perfiles de empresas</a></li>
-        <li class="registrar-empresa" ng-show="cerrar"><a href="./signup-company.html"><i class="material-icons">business</i>Registrar
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="./images/fondo-navbar.jpg" alt="imagen de perfil">
+                </div>
+                <a href="#" class="center-align"><img src="../images/elfarolito.png" class="circle"></a>
+                <a class="mt-0"><span class=" name white-text">{{name}} </span> </a>
+                <a class="mt-0"><span class="id white-text"> {{email}}</span></a>
+            </div>
+        </li>
+
+        <li><a href="curriculums.html"><i class="material-icons">contacts</i>Perfiles laborales</a></li>
+        <li><a href="vacantes.html"><i class="material-icons">business_center</i>Perfiles de empresas</a></li>
+        <li class="registrar-empresa" ng-show="iniciar"><a href="./signup-company.html"><i class="material-icons">business</i>Registrar
             mi empresa</a></li>
-        <li class="perfil no-mostrar"><a href="./usuario-perfil.html"><i class="material-icons">settings</i>Configuración
+        <li class="perfil" ng-show="cerrar"><a href="./usuario-perfil.html"><i class="material-icons">settings</i>Configuración
             de Perfil</a></li>
         <li id="sesion-cel" class="iniciar-sesion" ng-show="iniciar"><a href="./login.html"><i class="material-icons">account_circle</i>Iniciar
             sesión</a></li>
-        <li class="cerrar-sesion no-mostrar perfil" ng-show="cerrar"><a href="#!"><i class="material-icons">account_circle</i>Cerrar
-            sesión</a></li>
+        <li class="cerrar-sesion perfil" ng-show="cerrar" ng-click="cerrarSesion()"><a href="#!"><i
+                class="material-icons">account_circle</i>Cerrar sesión</a></li>
     </ul>
 </header>
 <div class="container curriculum center" ng-show="curriculum">
@@ -86,8 +98,8 @@
             <p id="nacimiento">{{nacimiento}}</p></p></div>
     </div>
     <div class="row">
-        <div class="col l6 s12"><p>País <br>
-            <p id="pais">{{state}}</p></p></div>
+        <div class="col l6 s12"><p>Estado <br>
+            <p id="state">{{state}}</p></p></div>
         <div class="col l6 s12"><p>Título <br>
             <p id="profesion">{{profesion}}</p></p></div>
     </div>
@@ -240,24 +252,23 @@
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="">Footer Content</h5>
-                <p class="">You can use rows and columns here to organize your footer content.</p>
+                <h5>EL FAROLITO</h5>
+                <p>Bolsa de trabajo</p>
             </div>
             <div class="col l4 offset-l2 s12">
-                <h5>Links</h5>
                 <ul>
-                    <li><a href="#!">Link 1</a></li>
-                    <li><a href="#!">Link 2</a></li>
-                    <li><a href="#!">Link 3</a></li>
-                    <li><a href="#!">Link 4</a></li>
+                    <li><a href="./terminos-y-condiciones.html">Términos y Condiciones</a></li>
+                    <li><a href="./politica-de-privacidad.html">Políticas de Privacidad</a></li>
+                    <li><a href="#!">Buscar candidatos</a></li>
+                    <li><a href="#!">Buscar empresas</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container grey-text">
-            Este sitio es para fines educativos
-            <a class="right" href="#!">More Links</a>
+            <p class="left">Este sitio es para fines educativos</p>
+            <p class="right">© Copyright 1999-2019 El farolito</p>
         </div>
     </div>
 </footer>

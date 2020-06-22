@@ -4,15 +4,16 @@
     <list default="true" id="c0b2b89d-4356-4a23-98db-73fd6e882efa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/curriculum.html" beforeDir="false" afterPath="$PROJECT_DIR$/curriculum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/curriculums-usuarios.html" beforeDir="false" afterPath="$PROJECT_DIR$/curriculums-usuarios.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/editar-curriculum.html" beforeDir="false" afterPath="$PROJECT_DIR$/editar-curriculum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/usuario/curriculums.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/usuario/curriculums.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/usuario/modificar-curriculum.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/usuario/modificar-curriculum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/usuario/registro.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/usuario/registro.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/usuario/sesion.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/usuario/sesion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mis-vacantes.html" beforeDir="false" afterPath="$PROJECT_DIR$/mis-vacantes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oferta-de-empleo.html" beforeDir="false" afterPath="$PROJECT_DIR$/oferta-de-empleo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/perfil-usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/perfil-usuario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/politica-de-privacidad.html" beforeDir="false" afterPath="$PROJECT_DIR$/politica-de-privacidad.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/subir-vacante.html" beforeDir="false" afterPath="$PROJECT_DIR$/subir-vacante.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terminos-y-condiciones.html" beforeDir="false" afterPath="$PROJECT_DIR$/terminos-y-condiciones.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario-perfil.html" beforeDir="false" afterPath="$PROJECT_DIR$/usuario-perfil.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vacantes-de-trabajo.html" beforeDir="false" afterPath="$PROJECT_DIR$/vacantes-de-trabajo.html" afterDir="false" />
     </list>
@@ -55,7 +56,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BolsaDeTrabajo_Backend" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
@@ -148,10 +149,17 @@
       <workItem from="1591657639992" duration="2568000" />
       <workItem from="1591722798078" duration="623000" />
       <workItem from="1591894023426" duration="3438000" />
+      <workItem from="1592774593681" duration="10063000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1592776616904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.174.1600.860@0.0.1920.1040" timestamp="1592776616904" />
   </component>
 </project>

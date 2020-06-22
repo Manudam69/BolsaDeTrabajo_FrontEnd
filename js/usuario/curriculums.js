@@ -48,9 +48,7 @@ app.controller('Ctrl2', function ($scope, $routeParams, $http) {
                     method: 'GET',
                 }).then(function successCallback(res) {
                     $scope.items = res.data.job;
-
                     $scope.enviar = function () {
-
                         $http({
                             url: '/quest',
                             method: 'POST',
